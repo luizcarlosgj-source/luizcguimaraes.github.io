@@ -71,12 +71,12 @@
 
     /* ── HERO ────────────────────────────────────────── */
     #hero {
-      min-height: 100vh;
+      min-height: auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      padding: 8rem 3rem 4rem;
-      gap: var(--gap-lg);
+      padding: 5.5rem 3rem 2rem;
+      gap: var(--gap-md);
       position: relative;
       overflow: hidden;
     }
@@ -100,7 +100,7 @@
     }
     .hero-name {
       font-family: var(--serif);
-      font-size: clamp(3rem, 5vw, 5.2rem);
+      font-size: clamp(2.4rem, 4vw, 4rem);
       font-weight: 900;
       line-height: 1.05;
       letter-spacing: -.02em;
@@ -161,7 +161,7 @@
       background: #fff;
       border: 1px solid var(--paper-alt);
       border-radius: 8px;
-      padding: 1.6rem 1.4rem;
+      padding: 1.1rem 1.2rem;
       position: relative;
       overflow: hidden;
       transition: transform .2s, box-shadow .2s;
@@ -177,7 +177,7 @@
     .kpi-card.ink::before  { background: var(--ink); }
     .kpi-number {
       font-family: var(--serif);
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       font-weight: 900;
       line-height: 1;
       color: var(--ink);
@@ -603,7 +603,7 @@
       margin-bottom: var(--gap-md);
     }
     .hero-avatar {
-      width: 220px; height: 220px; min-width: 220px;
+      width: 160px; height: 160px; min-width: 160px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center 10%;
@@ -675,6 +675,25 @@
     </div>
   </section>
 
+  <!-- ─── AWARDS MARQUEE ─── -->
+  <div id="awards-strip">
+    <div class="awards-track">
+      <span class="award-item">Prêmio IT Leaders 2014 — 1º Lugar em Saúde</span>
+      <span class="award-item">HIMSS EMRAM Stage 7 — 3º Hospital na América Latina</span>
+      <span class="award-item">100+ Inovadoras em TI 2014 — 1º Lugar em Saúde</span>
+      <span class="award-item">Prêmio IT Leaders 2013</span>
+      <span class="award-item">100+ Inovadoras em TI 2015</span>
+      <span class="award-item">Prêmio Health-IT Inovação 2016</span>
+      <span class="award-item">Diretor Técnico · ABCIS — 700+ CIOs</span>
+      <span class="award-item">Prêmio IT Leaders 2014 — 1º Lugar em Saúde</span>
+      <span class="award-item">HIMSS EMRAM Stage 7 — 3º Hospital na América Latina</span>
+      <span class="award-item">100+ Inovadoras em TI 2014 — 1º Lugar em Saúde</span>
+      <span class="award-item">Prêmio IT Leaders 2013</span>
+      <span class="award-item">100+ Inovadoras em TI 2015</span>
+      <span class="award-item">Prêmio Health-IT Inovação 2016</span>
+      <span class="award-item">Diretor Técnico · ABCIS — 700+ CIOs</span>
+    </div>
+  </div>
 
   <!-- ─── ABOUT ─── -->
   <section id="about">
