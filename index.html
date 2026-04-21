@@ -2,201 +2,240 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Luiz Guimarães | CIO & Head de TI</title>
+<title>Luiz Guimarães | CIO Estratégico</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-:root {
-  --bg:#050711;
-  --bg2:#0b1020;
-  --panel:#11152a;
-  --text:#f5f5f5;
-  --muted:#9aa0b3;
-  --accent:#f2c94c;
-  --primary:#2f80ed;
-}
-
-body{
+body {
   margin:0;
   font-family:system-ui;
-  background:
-    radial-gradient(circle at top left, rgba(47,128,237,0.2), transparent),
-    linear-gradient(135deg,var(--bg),var(--bg2));
-  color:var(--text);
+  background:#050711;
+  color:#fff;
 }
 
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:40px 24px;
-  display:flex;
-  gap:32px;
-}
-
-.left{
-  width:32%;
-  background:var(--panel);
-  padding:24px;
-  border-radius:16px;
-  text-align:center;
-}
-
-.left img{
+/* NAV */
+nav {
+  position:fixed;
   width:100%;
-  border-radius:12px;
-  margin-bottom:15px;
-}
-
-.btn{
-  display:block;
-  margin-top:10px;
-  padding:10px;
-  border-radius:20px;
-  text-decoration:none;
-  color:white;
-  background:linear-gradient(135deg,#2f80ed,#1c4ed8);
-}
-
-.right{
-  width:68%;
-}
-
-section{
-  background:var(--panel);
-  padding:22px;
-  border-radius:14px;
-  margin-bottom:20px;
-}
-
-h3{
-  color:var(--accent);
-}
-
-.metrics{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-}
-
-.metric{
-  background:#0c1022;
+  background:#0b1020;
   padding:12px;
-  border-radius:10px;
   text-align:center;
+  z-index:1000;
 }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
+nav a {
+  margin:0 14px;
+  color:#aaa;
+  text-decoration:none;
+  font-size:14px;
 }
 
-.card{
-  background:#0c1022;
-  padding:10px;
+nav a:hover { color:#fff; }
+
+/* CONTAINER */
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:90px 20px 40px;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom:50px;
+}
+
+h2 {
+  color:#f2c94c;
+}
+
+p {
+  line-height:1.6;
+}
+
+/* HERO */
+.hero {
+  font-size:20px;
+  font-weight:500;
+}
+
+/* METRICS */
+.metrics span {
+  display:inline-block;
+  margin:10px 15px 0 0;
+  font-size:14px;
+  color:#ccc;
+}
+
+/* CARDS */
+.card {
+  background:#101321;
+  padding:18px;
+  border-radius:10px;
+  margin-bottom:12px;
+}
+
+/* BOTÃO */
+.btn {
+  display:inline-block;
+  padding:10px 14px;
+  background:#2f80ed;
+  border-radius:6px;
+  color:#fff;
+  text-decoration:none;
+  margin-top:10px;
+}
+
+/* CV */
+iframe {
+  width:100%;
+  height:600px;
+  border:none;
   border-radius:10px;
 }
 
-@media(max-width:900px){
-.container{flex-direction:column;}
-.left,.right{width:100%;}
+@media(max-width:800px){
+  nav a { display:inline-block; margin:6px; }
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+<a href="#valor">Valor</a>
+<a href="#atuacao">Atuação</a>
+<a href="#resultados">Resultados</a>
+<a href="#projetos">Projetos</a>
+<a href="#cv">CV</a>
+<a href="#contato">Contato</a>
+</nav>
+
 <div class="container">
 
-<aside class="left">
-<img src="foto.jpg">
+<!-- HERO -->
+<section id="valor">
+<h2>Luiz Guimarães | CIO</h2>
 
-<h2>Luiz Guimarães</h2>
-<p><strong>CIO | Head de TI</strong></p>
+<p class="hero">
+Transformo tecnologia em eficiência operacional, redução de custos e geração de valor
+em ambientes críticos e altamente regulados.
+</p>
 
-<p>Transformação Digital • Governança • Resultados</p>
-
-<a href="CV_Luiz_Guimaraes_HeadTI.pdf" class="btn" download>
-📄 Baixar CV
-</a>
-
-<a href="mailto:luizcarlosgj@gmail.com" class="btn">Contato</a>
-<a href="https://linkedin.com/in/luizcguimaraes" target="_blank" class="btn">LinkedIn</a>
-</aside>
-
-<main class="right">
-
-<section>
-<h3>Resumo Executivo</h3>
 <p>
-Executivo de TI com mais de 25 anos de experiência, sendo 20 anos em saúde,
-liderando estratégia, governança e transformação digital em ambientes críticos.
-Histórico comprovado de geração de valor, eficiência operacional e inovação.
+Executivo com mais de 25 anos de experiência, sendo 20 anos no setor de saúde,
+atuando na liderança de transformação digital, governança e operações em larga escala.
 </p>
 
 <div class="metrics">
-<div class="metric"><strong>25+</strong><br>anos</div>
-<div class="metric"><strong>120</strong><br>pessoas</div>
-<div class="metric"><strong>R$50M+</strong><br>budget</div>
-<div class="metric"><strong>99,5%</strong><br>SLA</div>
+<span>25+ anos</span>
+<span>120 profissionais</span>
+<span>R$50M+ budget</span>
+<span>99,5% SLA</span>
 </div>
 </section>
 
-<section>
-<h3>Principais Resultados</h3>
+<!-- COMO ATUA -->
+<section id="atuacao">
+<h2>Como Gero Valor</h2>
+
+<div class="card">
+<strong>Eficiência Operacional</strong>
+<p>Redução estrutural de custos e aumento de produtividade através de revisão de contratos,
+automação e modernização tecnológica.</p>
+</div>
+
+<div class="card">
+<strong>Transformação Digital Real</strong>
+<p>Implantação de soluções de IA, cloud e integração de sistemas com impacto direto no negócio.</p>
+</div>
+
+<div class="card">
+<strong>Governança e Controle</strong>
+<p>Estruturação de modelos de governança, KPIs e previsibilidade operacional.</p>
+</div>
+
+<div class="card">
+<strong>Ambientes Críticos</strong>
+<p>Gestão de operações com alta disponibilidade, segurança e conformidade regulatória.</p>
+</div>
+</section>
+
+<!-- RESULTADOS -->
+<section id="resultados">
+<h2>Resultados Comprovados</h2>
+
 <ul>
 <li>R$10M+ em redução de custos estruturais</li>
 <li>R$3M em incremento de receita com dados</li>
-<li>90% menos falhas operacionais</li>
-<li>NPS até 98%</li>
+<li>Redução de até 90% em falhas operacionais</li>
+<li>NPS de até 98%</li>
+<li>HIMSS EMRAM Stage 7 (nível máximo global)</li>
 </ul>
 </section>
 
-<section>
-<h3>Case Destaque | HIMSS EMRAM Stage 7</h3>
-<p><strong>Contexto:</strong> Ambiente hospitalar complexo, necessidade de evolução digital e melhoria de eficiência.</p>
+<!-- PROJETOS -->
+<section id="projetos">
+<h2>Projetos Executados</h2>
 
-<p><strong>Desafio:</strong> Elevar maturidade digital ao nível máximo global, integrando sistemas e processos.</p>
-
-<p><strong>Ação:</strong></p>
-<ul>
-<li>Implantação de ERP hospitalar e interoperabilidade (FHIR, HL7)</li>
-<li>Uso de IA (IBM Watson) e automação</li>
-<li>Governança com ITIL e COBIT</li>
-</ul>
-
-<p><strong>Resultado:</strong></p>
-<ul>
-<li>HIMSS EMRAM Stage 7 (topo mundial)</li>
-<li>3º hospital da América Latina</li>
-<li>+R$3M em receita</li>
-<li>98% NPS</li>
-</ul>
-</section>
-
-<section>
-<h3>Escopo Executivo</h3>
-<ul>
-<li>Gestão de até 120 profissionais</li>
-<li>Orçamento acima de R$50M</li>
-<li>Atuação com C-Level</li>
-<li>Ambientes críticos e regulados</li>
-</ul>
-</section>
-
-<section>
-<h3>Especialização</h3>
-<div class="cards">
-<div class="card">Governança</div>
-<div class="card">Cibersegurança</div>
-<div class="card">Cloud</div>
-<div class="card">IA</div>
-<div class="card">Transformação Digital</div>
-<div class="card">Liderança</div>
+<div class="card">
+<h3>Unimed Volta Redonda</h3>
+<p>
+Transformação digital completa com implantação de ERP hospitalar,
+interoperabilidade e IA (IBM Watson).
+</p>
+<p><strong>Resultado:</strong> HIMSS Stage 7, +R$3M receita, NPS 98%</p>
 </div>
+
+<div class="card">
+<h3>Unimed São Carlos</h3>
+<p>
+Execução de 96 projetos estratégicos com IA, RPA e cibersegurança.
+</p>
+<p><strong>Resultado:</strong> R$2,2M economia e 90% menos falhas</p>
+</div>
+
+<div class="card">
+<h3>Unimed São José dos Campos</h3>
+<p>
+Implantação de ERP, cloud e interoperabilidade.
+</p>
+<p><strong>Resultado:</strong> R$1,9M economia e ganho operacional</p>
+</div>
+
+<div class="card">
+<h3>Grupo Visual Systems</h3>
+<p>
+Gestão de ambientes multi-cliente e operação nacional.
+</p>
+<p><strong>Resultado:</strong> SLA 99,5% e -40% incidentes</p>
+</div>
+
 </section>
 
-</main>
+<!-- CV -->
+<section id="cv">
+<h2>Currículo</h2>
+<iframe src="CV_Luiz_Guimaraes_HeadTI.pdf"></iframe>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+<h2>Contato</h2>
+
+<a class="btn" href="https://wa.me/5516996110822" target="_blank">
+WhatsApp
+</a>
+
+<p>Email: luizcarlosgj@gmail.com</p>
+
+<p>
+<a href="https://linkedin.com/in/luizcguimaraes" target="_blank">
+LinkedIn
+</a>
+</p>
+
+</section>
+
 </div>
 
 </body>
