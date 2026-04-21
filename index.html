@@ -7,138 +7,99 @@
 
 <style>
 :root {
-  --bg: #050711;
-  --bg2: #0b1020;
-  --panel: #11152a;
-  --text: #f5f5f5;
-  --muted: #9aa0b3;
-  --accent: #f2c94c;
-  --primary: #2f80ed;
-  --font: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bg:#050711;
+  --bg2:#0b1020;
+  --panel:#11152a;
+  --text:#f5f5f5;
+  --muted:#9aa0b3;
+  --accent:#f2c94c;
+  --primary:#2f80ed;
 }
 
-body {
-  margin: 0;
-  font-family: var(--font);
+body{
+  margin:0;
+  font-family:system-ui;
   background:
     radial-gradient(circle at top left, rgba(47,128,237,0.2), transparent),
-    radial-gradient(circle at bottom right, rgba(242,201,76,0.15), transparent),
-    linear-gradient(135deg, var(--bg), var(--bg2));
-  color: var(--text);
+    linear-gradient(135deg,var(--bg),var(--bg2));
+  color:var(--text);
 }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 24px;
-  display: flex;
-  gap: 32px;
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:40px 24px;
+  display:flex;
+  gap:32px;
 }
 
-/* LEFT */
-.left {
-  width: 32%;
-  background: linear-gradient(180deg,#11152a,#0b1020);
-  border-radius: 18px;
-  padding: 26px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-  text-align: center;
-}
-
-.left img {
-  width: 100%;
-  border-radius: 14px;
-  margin-bottom: 18px;
-}
-
-.left h1 {
-  font-size: 1.6rem;
-  margin: 8px 0;
-}
-
-.left p {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.badge {
-  background: rgba(47,128,237,0.2);
-  padding: 6px 10px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 0.8rem;
-}
-
-.contact a {
-  display: block;
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 20px;
-  text-decoration: none;
-  color: white;
-  background: linear-gradient(135deg,#2f80ed,#1c4ed8);
-}
-
-/* RIGHT */
-.right {
-  width: 68%;
-}
-
-section {
-  background: linear-gradient(180deg,#11152a,#0b1020);
-  border-radius: 16px;
-  padding: 24px;
-  margin-bottom: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-}
-
-h3 {
-  color: var(--accent);
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-}
-
-.metrics {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 10px;
-}
-
-.metric {
-  background:#0c1022;
-  padding:14px;
-  border-radius:12px;
+.left{
+  width:32%;
+  background:var(--panel);
+  padding:24px;
+  border-radius:16px;
   text-align:center;
 }
 
-.metric strong {
-  font-size: 1.2rem;
+.left img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:15px;
 }
 
-.cards {
+.btn{
+  display:block;
+  margin-top:10px;
+  padding:10px;
+  border-radius:20px;
+  text-decoration:none;
+  color:white;
+  background:linear-gradient(135deg,#2f80ed,#1c4ed8);
+}
+
+.right{
+  width:68%;
+}
+
+section{
+  background:var(--panel);
+  padding:22px;
+  border-radius:14px;
+  margin-bottom:20px;
+}
+
+h3{
+  color:var(--accent);
+}
+
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+.metric{
+  background:#0c1022;
+  padding:12px;
+  border-radius:10px;
+  text-align:center;
+}
+
+.cards{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:10px;
 }
 
-.card {
+.card{
   background:#0c1022;
-  padding:12px;
-  border-radius:12px;
-}
-
-ul {
-  padding-left: 18px;
-}
-
-li {
-  margin-bottom: 6px;
+  padding:10px;
+  border-radius:10px;
 }
 
 @media(max-width:900px){
-  .container{flex-direction:column;}
-  .left,.right{width:100%;}
+.container{flex-direction:column;}
+.left,.right{width:100%;}
 }
 </style>
 </head>
@@ -150,19 +111,17 @@ li {
 <aside class="left">
 <img src="foto.jpg">
 
-<h1>Luiz Guimarães</h1>
+<h2>Luiz Guimarães</h2>
 <p><strong>CIO | Head de TI</strong></p>
 
-<p>
-Transformação Digital • Governança • Eficiência Operacional
-</p>
+<p>Transformação Digital • Governança • Resultados</p>
 
-<div class="badge">HIMSS Stage 7 • IT Leaders • Palestrante Global</div>
+<a href="CV_Luiz_Guimaraes_HeadTI.pdf" class="btn" download>
+📄 Baixar CV
+</a>
 
-<div class="contact">
-<a href="mailto:luizcarlosgj@gmail.com">Contato</a>
-<a href="https://linkedin.com/in/luizcguimaraes" target="_blank">LinkedIn</a>
-</div>
+<a href="mailto:luizcarlosgj@gmail.com" class="btn">Contato</a>
+<a href="https://linkedin.com/in/luizcguimaraes" target="_blank" class="btn">LinkedIn</a>
 </aside>
 
 <main class="right">
@@ -170,15 +129,14 @@ Transformação Digital • Governança • Eficiência Operacional
 <section>
 <h3>Resumo Executivo</h3>
 <p>
-Executivo de Tecnologia com mais de 25 anos de experiência, sendo 20 anos no setor de saúde,
-liderando estratégia, governança e transformação digital em ambientes críticos e regulados.
-Atuação consolidada na geração de valor, com mais de R$10 milhões em otimizações,
-além de modernização tecnológica e aumento de eficiência operacional em larga escala.
+Executivo de TI com mais de 25 anos de experiência, sendo 20 anos em saúde,
+liderando estratégia, governança e transformação digital em ambientes críticos.
+Histórico comprovado de geração de valor, eficiência operacional e inovação.
 </p>
 
 <div class="metrics">
 <div class="metric"><strong>25+</strong><br>anos</div>
-<div class="metric"><strong>120</strong><br>profissionais</div>
+<div class="metric"><strong>120</strong><br>pessoas</div>
 <div class="metric"><strong>R$50M+</strong><br>budget</div>
 <div class="metric"><strong>99,5%</strong><br>SLA</div>
 </div>
@@ -187,53 +145,55 @@ além de modernização tecnológica e aumento de eficiência operacional em lar
 <section>
 <h3>Principais Resultados</h3>
 <ul>
-<li>R$10M+ em redução de custos com revisão estratégica de contratos e infraestrutura</li>
-<li>R$3M em aumento de receita com dados e automação</li>
-<li>Redução de até 90% em falhas operacionais</li>
-<li>NPS de até 98% em ambientes críticos</li>
-<li>HIMSS EMRAM Stage 7, referência máxima em maturidade digital</li>
+<li>R$10M+ em redução de custos estruturais</li>
+<li>R$3M em incremento de receita com dados</li>
+<li>90% menos falhas operacionais</li>
+<li>NPS até 98%</li>
+</ul>
+</section>
+
+<section>
+<h3>Case Destaque | HIMSS EMRAM Stage 7</h3>
+<p><strong>Contexto:</strong> Ambiente hospitalar complexo, necessidade de evolução digital e melhoria de eficiência.</p>
+
+<p><strong>Desafio:</strong> Elevar maturidade digital ao nível máximo global, integrando sistemas e processos.</p>
+
+<p><strong>Ação:</strong></p>
+<ul>
+<li>Implantação de ERP hospitalar e interoperabilidade (FHIR, HL7)</li>
+<li>Uso de IA (IBM Watson) e automação</li>
+<li>Governança com ITIL e COBIT</li>
+</ul>
+
+<p><strong>Resultado:</strong></p>
+<ul>
+<li>HIMSS EMRAM Stage 7 (topo mundial)</li>
+<li>3º hospital da América Latina</li>
+<li>+R$3M em receita</li>
+<li>98% NPS</li>
 </ul>
 </section>
 
 <section>
 <h3>Escopo Executivo</h3>
 <ul>
-<li>Gestão de equipes de até 120 profissionais</li>
-<li>Orçamento superior a R$50M (CAPEX/OPEX)</li>
-<li>Ambientes críticos com alta disponibilidade</li>
-<li>Atuação direta com C-Level e conselho executivo</li>
-</ul>
-</section>
-
-<section>
-<h3>Experiência Estratégica</h3>
-<ul>
-<li>Reestruturação completa da TI em cenários de crise e crescimento</li>
-<li>Implantação de governança corporativa e modelos operacionais escaláveis</li>
-<li>Transformação digital com uso de Cloud, IA e automação</li>
-<li>Integração entre tecnologia, negócio e operação com foco em resultado</li>
+<li>Gestão de até 120 profissionais</li>
+<li>Orçamento acima de R$50M</li>
+<li>Atuação com C-Level</li>
+<li>Ambientes críticos e regulados</li>
 </ul>
 </section>
 
 <section>
 <h3>Especialização</h3>
 <div class="cards">
-<div class="card">Governança & GRC</div>
+<div class="card">Governança</div>
 <div class="card">Cibersegurança</div>
-<div class="card">Cloud & Arquitetura</div>
-<div class="card">IA & Automação</div>
+<div class="card">Cloud</div>
+<div class="card">IA</div>
 <div class="card">Transformação Digital</div>
-<div class="card">Liderança Executiva</div>
+<div class="card">Liderança</div>
 </div>
-</section>
-
-<section>
-<h3>Presença Internacional</h3>
-<ul>
-<li>Palestrante HIMSS EUA (Las Vegas e Orlando)</li>
-<li>Evento Microsoft Alemanha</li>
-<li>Eventos globais de transformação digital</li>
-</ul>
 </section>
 
 </main>
