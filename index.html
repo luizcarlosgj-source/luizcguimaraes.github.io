@@ -41,6 +41,7 @@ body {
 
 .sidebar p {
   color:#aaa;
+  font-size:14px;
 }
 
 .btn {
@@ -80,6 +81,7 @@ h2 {
   padding:20px;
   border-radius:12px;
   margin-bottom:20px;
+  border:1px solid rgba(255,255,255,0.05);
 }
 
 .projeto h3 {
@@ -91,8 +93,23 @@ h2 {
   color:#ccc;
 }
 
+.projeto ul {
+  margin-top:8px;
+}
+
+.projeto li {
+  margin-bottom:4px;
+}
+
 .projeto strong {
   color:#fff;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+  .container {
+    grid-template-columns: 1fr;
+  }
 }
 
 </style>
@@ -104,27 +121,33 @@ h2 {
 
 <!-- SIDEBAR -->
 <div class="sidebar">
-<img src="foto.jpg">
+<img src="foto.jpg" alt="Luiz Guimarães">
 
 <h2>Luiz Guimarães</h2>
-<p>CIO | Transformação Digital</p>
+<p>CIO | Transformação Digital & Governança</p>
 
-<a class="btn" href="CV_Luiz_Guimaraes_HeadTI.pdf" target="_blank">Ver CV</a>
-<a class="btn" href="https://wa.me/5516996110822" target="_blank">WhatsApp</a>
-<a class="btn" href="https://linkedin.com/in/luizcguimaraes" target="_blank">LinkedIn</a>
+<a class="btn" href="CV_Luiz_Guimaraes_HeadTI.pdf" target="_blank">
+Visualizar Currículo
+</a>
 
 <p><strong>Telefone:</strong><br>(16) 99611-0822</p>
 <p><strong>Email:</strong><br>luizcarlosgj@gmail.com</p>
+
+<p>
+<a href="https://linkedin.com/in/luizcguimaraes" target="_blank" style="color:#f2c94c;">
+LinkedIn
+</a>
+</p>
 </div>
 
-<!-- CONTEUDO -->
+<!-- CONTEÚDO -->
 <div>
 
 <section>
 <h1>Transformo tecnologia em resultado de negócio</h1>
 
 <p>
-Executivo de TI com mais de 25 anos de experiência, sendo 20 anos em saúde,
+Executivo de TI com mais de 25 anos de experiência, sendo 20 anos no setor de saúde,
 liderando transformação digital, eficiência operacional e operações críticas.
 </p>
 
@@ -132,7 +155,6 @@ liderando transformação digital, eficiência operacional e operações crític
 <div class="metric">+R$3M receita gerada</div>
 <div class="metric">99,5% SLA</div>
 <div class="metric">120 profissionais</div>
-
 </section>
 
 <section>
@@ -141,7 +163,7 @@ liderando transformação digital, eficiência operacional e operações crític
 <ul>
 <li>Interação direta com C-Level e Conselho</li>
 <li>Gestão de orçamento superior a R$50M</li>
-<li>Condução de transformação digital</li>
+<li>Liderança de transformação digital em larga escala</li>
 <li>Gestão de ambientes críticos e regulados</li>
 </ul>
 </section>
@@ -151,42 +173,63 @@ liderando transformação digital, eficiência operacional e operações crític
 
 <div class="projeto">
 <h3>Unimed Volta Redonda</h3>
-
 <p><strong>Desafio:</strong> ambiente hospitalar complexo e baixa integração de sistemas</p>
-<p><strong>Ação:</strong> implantação de ERP, interoperabilidade, IA (IBM Watson) e governança</p>
-<p><strong>Resultado:</strong> HIMSS Stage 7, +R$3M receita, NPS 98%, redução de falhas operacionais</p>
+<p><strong>Ação:</strong></p>
+<ul>
+<li>Implantação do ERP hospitalar <strong>Tasy (Philips)</strong></li>
+<li>Integração via <strong>HL7 e FHIR</strong></li>
+<li>Uso de <strong>Inteligência Artificial com IBM Watson</strong></li>
+<li>Estruturação de BI e governança (<strong>ITIL / COBIT</strong>)</li>
+</ul>
+<p><strong>Resultado:</strong> HIMSS Stage 7, +R$3M receita, NPS 98%</p>
 </div>
 
 <div class="projeto">
 <h3>Unimed São Carlos</h3>
-
-<p><strong>Desafio:</strong> baixa eficiência operacional e alto volume de processos manuais</p>
-<p><strong>Ação:</strong> execução de 96 projetos com RPA, IA e modernização tecnológica</p>
-<p><strong>Resultado:</strong> R$2,2M economia, 90% redução de falhas, SLA 99,5%</p>
+<p><strong>Desafio:</strong> processos manuais e baixa eficiência</p>
+<p><strong>Ação:</strong></p>
+<ul>
+<li>Execução de <strong>96 projetos estratégicos</strong></li>
+<li>Automação com <strong>RPA</strong> e IA</li>
+<li>Implantação de <strong>Data Lake e BI</strong></li>
+<li>Fortalecimento de <strong>cibersegurança</strong></li>
+</ul>
+<p><strong>Resultado:</strong> R$2,2M economia e 90% redução de falhas</p>
 </div>
 
 <div class="projeto">
 <h3>Unimed São José dos Campos</h3>
-
-<p><strong>Desafio:</strong> infraestrutura legada e alto custo operacional</p>
-<p><strong>Ação:</strong> modernização com cloud, ERP e automação</p>
-<p><strong>Resultado:</strong> R$1,9M economia, aumento de 50% na eficiência</p>
+<p><strong>Desafio:</strong> infraestrutura legada e alto custo</p>
+<p><strong>Ação:</strong></p>
+<ul>
+<li>Implantação de ERP (<strong>TOTVS e Tasy</strong>)</li>
+<li>Estratégia multicloud (<strong>AWS, Azure, GCP</strong>)</li>
+<li>Modernização com <strong>Dell APEX</strong></li>
+</ul>
+<p><strong>Resultado:</strong> R$1,9M economia e aumento de eficiência</p>
 </div>
 
 <div class="projeto">
 <h3>Ipasgo Saúde</h3>
-
-<p><strong>Desafio:</strong> alto custo e baixa eficiência operacional</p>
-<p><strong>Ação:</strong> renegociação de contratos, reestruturação de TI e governança</p>
-<p><strong>Resultado:</strong> R$10M redução de custos e modernização da operação</p>
+<p><strong>Desafio:</strong> alto custo e baixa eficiência</p>
+<p><strong>Ação:</strong></p>
+<ul>
+<li>Renegociação de contratos</li>
+<li>Reestruturação de TI e governança</li>
+<li>Implantação de alta disponibilidade (<strong>F5</strong>)</li>
+</ul>
+<p><strong>Resultado:</strong> R$10M redução de custos</p>
 </div>
 
 <div class="projeto">
 <h3>Visual Systems</h3>
-
-<p><strong>Desafio:</strong> operação complexa multi-cliente</p>
-<p><strong>Ação:</strong> gestão de infraestrutura, segurança e operações em larga escala</p>
-<p><strong>Resultado:</strong> SLA 99,5%, redução de 40% incidentes, NPS 90%</p>
+<p><strong>Desafio:</strong> operação multi-cliente complexa</p>
+<p><strong>Ação:</strong></p>
+<ul>
+<li>Gestão de ambientes para 240+ empresas</li>
+<li>Implantação de KPIs e automação</li>
+</ul>
+<p><strong>Resultado:</strong> SLA 99,5% e redução de incidentes</p>
 </div>
 
 </section>
