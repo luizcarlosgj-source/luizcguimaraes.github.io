@@ -8,122 +8,110 @@
 
 <style>
 :root {
-  --bg-dark: #05060a;
-  --bg-section: #0b0d14;
-  --primary: #2f80ed;
+  --bg: #0a0c10;
+  --panel: #11141a;
+  --text: #f5f5f5;
+  --muted: #b7b7b7;
   --accent: #f2c94c;
-  --text-main: #f5f5f5;
-  --text-muted: #b3b3b3;
-  --card-bg: #11141f;
-  --border-soft: #1f2433;
-  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --primary: #2f80ed;
+  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: var(--font-main);
-  background: radial-gradient(circle at top, #111827 0, #020308 55%);
-  color: var(--text-main);
-  line-height: 1.6;
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
 }
 
-/* MENU */
-nav {
-  width: 100%;
-  padding: 18px 0;
-  text-align: center;
-  background: rgba(0,0,0,0.35);
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(6px);
-  z-index: 10;
-}
-
-nav a {
-  margin: 0 18px;
-  color: var(--text-main);
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-nav a:hover {
-  color: var(--accent);
-}
-
-/* HERO */
-.hero {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 20px;
+/* LAYOUT PRINCIPAL */
+.container {
   display: flex;
+  min-height: 100vh;
+}
+
+/* COLUNA ESQUERDA */
+.left {
+  width: 38%;
+  background: linear-gradient(180deg, #0f1117, #0a0c10);
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 40px;
+  border-right: 1px solid #1c1f26;
 }
 
-.hero img {
-  width: 300px;
+.left img {
+  width: 85%;
   border-radius: 12px;
-  box-shadow: 0 0 18px rgba(0,0,0,0.45);
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  margin-bottom: 30px;
 }
 
-.hero-text h1 {
-  font-size: 3rem;
-  font-weight: 700;
+.left h1 {
+  font-size: 2rem;
+  margin: 10px 0 5px;
 }
 
-.hero-text h2 {
-  font-size: 1.4rem;
+.left h2 {
+  font-size: 1.1rem;
   font-weight: 400;
-  color: var(--text-muted);
-  margin-top: 10px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.4;
 }
 
-.hero-buttons {
-  margin-top: 20px;
+.left .contact {
+  margin-top: 30px;
+  width: 100%;
 }
 
-.hero-buttons a {
-  display: inline-block;
-  margin-right: 12px;
-  padding: 10px 18px;
+.left .contact a {
+  display: block;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background: var(--panel);
   border-radius: 8px;
   text-decoration: none;
-  font-weight: 500;
+  color: var(--text);
+  border: 1px solid #1f232b;
+  text-align: center;
 }
 
-.btn-primary {
-  background: var(--primary);
-  color: white;
+.left .contact a:hover {
+  background: #1a1d24;
 }
 
-.btn-outline {
-  border: 1px solid var(--primary);
-  color: var(--primary);
+/* COLUNA DIREITA */
+.right {
+  width: 62%;
+  padding: 50px 60px;
 }
 
-/* SEÇÕES */
 section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  background: var(--card-bg);
-  border-radius: 12px;
-  border: 1px solid var(--border-soft);
+  margin-bottom: 50px;
 }
 
 section h3 {
   font-size: 1.6rem;
-  margin-bottom: 15px;
   color: var(--accent);
+  margin-bottom: 15px;
 }
 
-/* FOOTER */
+section p, section li {
+  font-size: 1.05rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+ul {
+  padding-left: 20px;
+}
+
 footer {
   text-align: center;
-  padding: 40px 0;
-  color: var(--text-muted);
+  padding: 30px;
+  color: var(--muted);
   font-size: 0.9rem;
 }
 </style>
@@ -131,67 +119,63 @@ footer {
 
 <body>
 
-<!-- MENU -->
-<nav>
-  <a href="#sobre">Resumo</a>
-  <a href="#experiencia">Experiência</a>
-  <a href="#expertise">Expertise</a>
-  <a href="#contato">Contato</a>
-</nav>
+<div class="container">
 
-<!-- HERO -->
-<div class="hero">
-  <img src="foto.jpg" alt="Foto de Luiz Guimarães">
+  <!-- COLUNA ESQUERDA -->
+  <div class="left">
+    <img src="foto.jpg" alt="Foto de Luiz Guimarães">
 
-  <div class="hero-text">
     <h1>Luiz Guimarães</h1>
-    <h2>CIO | Chefe de TI | Transformação Digital</h2>
+    <h2>CIO • Chefe de TI<br>Transformação Digital</h2>
 
-    <div class="hero-buttons">
-      <a class="btn-primary" href="mailto:luizcarlosgj@gmail.com">E-mail</a>
-      <a class="btn-outline" href="https://linkedin.com/in/luizcguimaraes" target="_blank">LinkedIn</a>
+    <div class="contact">
+      <a href="mailto:luizcarlosgj@gmail.com">E-mail</a>
+      <a href="https://linkedin.com/in/luizcguimaraes" target="_blank">LinkedIn</a>
     </div>
   </div>
+
+  <!-- COLUNA DIREITA -->
+  <div class="right">
+
+    <section id="sobre">
+      <h3>Resumo Executivo</h3>
+      <p>
+        Executivo de Tecnologia com mais de 25 anos de experiência em liderança estratégica,
+        governança, inovação e transformação digital nos setores de saúde e corporativo.
+        Especialista em modernização de ambientes críticos, gestão de equipes multidisciplinares
+        e implantação de soluções corporativas de alta disponibilidade.
+      </p>
+    </section>
+
+    <section id="experiencia">
+      <h3>Experiência</h3>
+      <ul>
+        <li>Direção de TI e Transformação Digital</li>
+        <li>Governança, Segurança e Arquitetura de TI</li>
+        <li>Gestão de equipes multidisciplinares</li>
+        <li>Implantação de soluções corporativas e hospitalares</li>
+      </ul>
+    </section>
+
+    <section id="expertise">
+      <h3>Expertise</h3>
+      <ul>
+        <li>Transformação Digital</li>
+        <li>Estratégia e Governança</li>
+        <li>Infraestrutura e Operações</li>
+        <li>Inovação e Modernização de TI</li>
+      </ul>
+    </section>
+
+    <section id="contato">
+      <h3>Contato</h3>
+      <p>E-mail: <a href="mailto:luizcarlosgj@gmail.com">luizcarlosgj@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/luizcguimaraes" target="_blank">linkedin.com/in/luizcguimaraes</a></p>
+      <p>Telefone: (16) 99611-0822</p>
+    </section>
+
+  </div>
 </div>
-
-<!-- SOBRE -->
-<section id="sobre">
-  <h3>Resumo</h3>
-  <p>
-    Executivo de Tecnologia com mais de 25 anos de experiência em liderança estratégica,
-    governança, inovação e transformação digital nos setores de saúde e corporativo.
-  </p>
-</section>
-
-<!-- EXPERIÊNCIA -->
-<section id="experiencia">
-  <h3>Experiência</h3>
-  <ul>
-    <li>Direção de TI e Transformação Digital</li>
-    <li>Governança, Segurança e Arquitetura de TI</li>
-    <li>Gestão de equipes multidisciplinares</li>
-    <li>Implantação de soluções corporativas e hospitalares</li>
-  </ul>
-</section>
-
-<!-- EXPERTISE -->
-<section id="expertise">
-  <h3>Expertise</h3>
-  <ul>
-    <li>Transformação Digital</li>
-    <li>Estratégia e Governança</li>
-    <li>Infraestrutura e Operações</li>
-    <li>Inovação e Modernização de TI</li>
-  </ul>
-</section>
-
-<!-- CONTATO -->
-<section id="contato">
-  <h3>Contato</h3>
-  <p>E-mail: <a href="mailto:luizcarlosgj@gmail.com">luizcarlosgj@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/luizcguimaraes" target="_blank">linkedin.com/in/luizcguimaraes</a></p>
-  <p>Telefone: (16) 99611-0822</p>
-</section>
 
 <footer>
   © <span id="year"></span> Luiz Guimarães — CIO & Head de TI
