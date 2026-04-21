@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <title>Luiz Guimarães | CIO & Head de TI</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 :root {
   --bg: #050711;
-  --panel: #101321;
+  --bg2: #0b1020;
+  --panel: #11152a;
   --text: #f5f5f5;
-  --muted: #b7b7b7;
+  --muted: #9aa0b3;
   --accent: #f2c94c;
   --primary: #2f80ed;
   --font: system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -19,46 +20,83 @@
 body {
   margin: 0;
   font-family: var(--font);
-  background: linear-gradient(135deg,#050711,#0b1020);
+  background:
+    radial-gradient(circle at top left, rgba(47,128,237,0.2), transparent),
+    radial-gradient(circle at bottom right, rgba(242,201,76,0.15), transparent),
+    linear-gradient(135deg, var(--bg), var(--bg2));
   color: var(--text);
 }
 
 .container {
-  display: flex;
   max-width: 1200px;
   margin: auto;
-  padding: 30px;
-  gap: 30px;
+  padding: 40px 24px;
+  display: flex;
+  gap: 32px;
 }
 
+/* LEFT */
 .left {
   width: 32%;
-  background: var(--panel);
-  padding: 24px;
-  border-radius: 16px;
+  background: linear-gradient(180deg,#11152a,#0b1020);
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
   text-align: center;
 }
 
 .left img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 14px;
   margin-bottom: 18px;
 }
 
+.left h1 {
+  font-size: 1.6rem;
+  margin: 8px 0;
+}
+
+.left p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.badge {
+  background: rgba(47,128,237,0.2);
+  padding: 6px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
+.contact a {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg,#2f80ed,#1c4ed8);
+}
+
+/* RIGHT */
 .right {
   width: 68%;
 }
 
 section {
-  background: var(--panel);
-  padding: 22px;
-  border-radius: 14px;
+  background: linear-gradient(180deg,#11152a,#0b1020);
+  border-radius: 16px;
+  padding: 24px;
   margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 h3 {
   color: var(--accent);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
 }
 
 .metrics {
@@ -68,10 +106,14 @@ h3 {
 }
 
 .metric {
-  background:#0d111f;
-  padding:10px;
-  border-radius:10px;
+  background:#0c1022;
+  padding:14px;
+  border-radius:12px;
   text-align:center;
+}
+
+.metric strong {
+  font-size: 1.2rem;
 }
 
 .cards {
@@ -81,9 +123,17 @@ h3 {
 }
 
 .card {
-  background:#0d111f;
-  padding:10px;
-  border-radius:10px;
+  background:#0c1022;
+  padding:12px;
+  border-radius:12px;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 6px;
 }
 
 @media(max-width:900px){
@@ -100,22 +150,19 @@ h3 {
 <aside class="left">
 <img src="foto.jpg">
 
-<h2>Luiz Guimarães</h2>
+<h1>Luiz Guimarães</h1>
 <p><strong>CIO | Head de TI</strong></p>
 
-<p>Transformação Digital<br>Saúde & Corporativo</p>
+<p>
+Transformação Digital • Governança • Eficiência Operacional
+</p>
 
-<hr>
+<div class="badge">HIMSS Stage 7 • IT Leaders • Palestrante Global</div>
 
-<p><strong>HIMSS EMRAM Stage 7</strong></p>
-<p>Prêmio IT Leaders (6x)</p>
-<p>Palestrante Internacional</p>
-
-<hr>
-
-<p>📧 luizcarlosgj@gmail.com</p>
-<p>📱 (16) 99611-0822</p>
-<p><a href="https://linkedin.com/in/luizcguimaraes" target="_blank">LinkedIn</a></p>
+<div class="contact">
+<a href="mailto:luizcarlosgj@gmail.com">Contato</a>
+<a href="https://linkedin.com/in/luizcguimaraes" target="_blank">LinkedIn</a>
+</div>
 </aside>
 
 <main class="right">
@@ -124,52 +171,47 @@ h3 {
 <h3>Resumo Executivo</h3>
 <p>
 Executivo de Tecnologia com mais de 25 anos de experiência, sendo 20 anos no setor de saúde,
-liderando estratégia, governança e transformação digital em ambientes críticos e altamente regulados.
-Histórico comprovado na geração de valor, com mais de R$10 milhões em otimizações,
-aumento de eficiência operacional e implementação de soluções de alta complexidade.
+liderando estratégia, governança e transformação digital em ambientes críticos e regulados.
+Atuação consolidada na geração de valor, com mais de R$10 milhões em otimizações,
+além de modernização tecnológica e aumento de eficiência operacional em larga escala.
 </p>
 
 <div class="metrics">
-<div class="metric">25+ anos<br><small>Experiência</small></div>
-<div class="metric">120 pessoas<br><small>Times liderados</small></div>
-<div class="metric">R$50M+<br><small>Budget gerenciado</small></div>
-<div class="metric">99,5%<br><small>SLA</small></div>
+<div class="metric"><strong>25+</strong><br>anos</div>
+<div class="metric"><strong>120</strong><br>profissionais</div>
+<div class="metric"><strong>R$50M+</strong><br>budget</div>
+<div class="metric"><strong>99,5%</strong><br>SLA</div>
 </div>
 </section>
 
 <section>
 <h3>Principais Resultados</h3>
 <ul>
-<li>R$10M+ em redução de custos via renegociação e otimização de infraestrutura</li>
-<li>R$3M em aumento de receita com uso de dados e automação</li>
-<li>Redução de até 90% em falhas operacionais com RPA e IA</li>
+<li>R$10M+ em redução de custos com revisão estratégica de contratos e infraestrutura</li>
+<li>R$3M em aumento de receita com dados e automação</li>
+<li>Redução de até 90% em falhas operacionais</li>
 <li>NPS de até 98% em ambientes críticos</li>
-<li>Certificação HIMSS EMRAM Stage 7, referência máxima em maturidade digital</li>
+<li>HIMSS EMRAM Stage 7, referência máxima em maturidade digital</li>
 </ul>
 </section>
 
 <section>
-<h3>Experiência Executiva</h3>
-<p><strong>IPASGO Saúde</strong> | Gerente de Tecnologia</p>
-<p>600 mil beneficiários, ambiente regulado e de alta complexidade</p>
-
+<h3>Escopo Executivo</h3>
 <ul>
-<li>Reestruturação completa da TI em cenário de crise</li>
-<li>Implantação de governança e modelo CAPEX/OPEX</li>
-<li>Redução de R$10M em custos estratégicos</li>
+<li>Gestão de equipes de até 120 profissionais</li>
+<li>Orçamento superior a R$50M (CAPEX/OPEX)</li>
+<li>Ambientes críticos com alta disponibilidade</li>
+<li>Atuação direta com C-Level e conselho executivo</li>
 </ul>
+</section>
 
-<p><strong>Grupo Visual Systems</strong> | Diretor de TI</p>
+<section>
+<h3>Experiência Estratégica</h3>
 <ul>
-<li>Gestão de 240 clientes e ambientes multi-tenant</li>
-<li>SLA de 99,5% e redução de 40% em incidentes</li>
-</ul>
-
-<p><strong>Unimed (diversas unidades)</strong></p>
-<ul>
-<li>Liderança de até 120 profissionais</li>
-<li>Implantação de ERPs hospitalares e interoperabilidade</li>
-<li>Projetos de IA, Cloud e transformação digital</li>
+<li>Reestruturação completa da TI em cenários de crise e crescimento</li>
+<li>Implantação de governança corporativa e modelos operacionais escaláveis</li>
+<li>Transformação digital com uso de Cloud, IA e automação</li>
+<li>Integração entre tecnologia, negócio e operação com foco em resultado</li>
 </ul>
 </section>
 
@@ -186,21 +228,11 @@ aumento de eficiência operacional e implementação de soluções de alta compl
 </section>
 
 <section>
-<h3>Diferenciais</h3>
-<ul>
-<li>Experiência real em transformação digital em larga escala</li>
-<li>Forte atuação em ambientes críticos e regulados</li>
-<li>Integração entre tecnologia, negócio e operação</li>
-<li>Perfil híbrido: saúde e corporativo</li>
-</ul>
-</section>
-
-<section>
 <h3>Presença Internacional</h3>
 <ul>
 <li>Palestrante HIMSS EUA (Las Vegas e Orlando)</li>
 <li>Evento Microsoft Alemanha</li>
-<li>Eventos internacionais de transformação digital</li>
+<li>Eventos globais de transformação digital</li>
 </ul>
 </section>
 
