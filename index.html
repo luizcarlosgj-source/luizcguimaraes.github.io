@@ -1,683 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Luiz Guimarães | CIO & Head de TI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Luiz Guimarães - CIO e Head de TI com mais de 25 anos de experiência em estratégia, governança e transformação digital em saúde e corporativo." />
-  <style>
-    :root {
-      --bg-dark: #05060a;
-      --bg-section: #0b0d14;
-      --primary: #2f80ed;
-      --accent: #f2c94c;
-      --text-main: #f5f5f5;
-      --text-muted: #b3b3b3;
-      --card-bg: #11141f;
-      --border-soft: #1f2433;
-      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+<meta charset="UTF-8" />
+<title>Luiz Guimarães | CIO & Head de TI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Luiz Guimarães - CIO e Head de TI com mais de 25 anos de experiência em estratégia, governança e transformação digital em saúde e corporativo." />
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+:root {
+  --bg-dark: #05060a;
+  --bg-section: #0b0d14;
+  --primary: #2f80ed;
+  --accent: #f2c94c;
+  --text-main: #f5f5f5;
+  --text-muted: #b3b3b3;
+  --card-bg: #11141f;
+  --border-soft: #1f2433;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
 
-    body {
-      font-family: var(--font-main);
-      background: radial-gradient(circle at top, #111827 0, #020308 55%);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
+body {
+  font-family: var(--font-main);
+  background: radial-gradient(circle at top, #111827 0, #020308 55%);
+  color: var(--text-main);
+  line-height: 1.6;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+header {
+  padding: 60px 20px;
+  text-align: center;
+}
 
-    header {
-      padding: 24px 32px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(16px);
-      background: linear-gradient(to bottom, rgba(5,6,10,0.95), rgba(5,6,10,0.7), transparent);
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-    }
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
 
-    header .logo {
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
+header h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
 
-    header nav a {
-      margin-left: 20px;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-soft);
+}
 
-    header nav a:hover {
-      color: var(--text-main);
-    }
+section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: var(--accent);
+}
 
-    .container {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 32px 16px 64px;
-    }
-
-    /* HERO */
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 32px;
-      padding: 40px 0 32px;
-      align-items: center;
-    }
-
-    .hero-title {
-      font-size: 2.4rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .hero-subtitle {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-    }
-
-    .hero-badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-
-    .badge {
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.12);
-      padding: 4px 10px;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      background: rgba(15,23,42,0.8);
-    }
-
-    .badge.highlight {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: rgba(242,201,76,0.06);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-
-    .btn {
-      border-radius: 999px;
-      padding: 10px 20px;
-      font-size: 0.9rem;
-      border: 1px solid transparent;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #2f80ed, #56ccf2);
-      color: #fff;
-      border-color: rgba(255,255,255,0.08);
-      box-shadow: 0 10px 30px rgba(15,118,255,0.35);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--text-main);
-      border-color: rgba(255,255,255,0.18);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--primary);
-      color: var(--primary);
-    }
-
-    .hero-metrics {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 8px;
-    }
-
-    .metric-card {
-      background: radial-gradient(circle at top, #111827, #020617);
-      border-radius: 16px;
-      padding: 12px 14px;
-      border: 1px solid rgba(148,163,184,0.25);
-    }
-
-    .metric-value {
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-
-    .metric-label {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-
-    .hero-right {
-      background: radial-gradient(circle at top, #111827, #020617);
-      border-radius: 24px;
-      padding: 20px 20px 18px;
-      border: 1px solid rgba(148,163,184,0.35);
-      box-shadow: 0 18px 45px rgba(15,23,42,0.8);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-right::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background: radial-gradient(circle at top, rgba(56,189,248,0.18), transparent 55%);
-      opacity: 0.7;
-      pointer-events: none;
-    }
-
-    .hero-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-name {
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-
-    .hero-role {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .hero-location {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .hero-contact {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-top: 8px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-contact a {
-      color: var(--text-main);
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 12px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-tag {
-      font-size: 0.7rem;
-      padding: 4px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.4);
-      background: rgba(15,23,42,0.85);
-      color: var(--text-muted);
-    }
-
-    /* SECTIONS */
-
-    section {
-      margin-top: 40px;
-    }
-
-    section h2 {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
-    }
-
-    .section-subtitle {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border-radius: 18px;
-      padding: 18px 18px 16px;
-      border: 1px solid var(--border-soft);
-      margin-bottom: 16px;
-    }
-
-    .card h3 {
-      font-size: 1rem;
-      margin-bottom: 4px;
-    }
-
-    .card h4 {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 8px;
-    }
-
-    .pill {
-      font-size: 0.75rem;
-      padding: 4px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.4);
-      color: var(--text-muted);
-    }
-
-    ul {
-      list-style: none;
-      margin-top: 6px;
-    }
-
-    ul li {
-      font-size: 0.9rem;
-      margin-bottom: 4px;
-      color: var(--text-muted);
-    }
-
-    .highlight-text {
-      color: var(--text-main);
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .metric-chip {
-      background: rgba(15,23,42,0.9);
-      border-radius: 999px;
-      padding: 6px 10px;
-      border: 1px solid rgba(148,163,184,0.4);
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-
-    .contact-card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-
-    footer {
-      padding: 24px 16px 40px;
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    @media (max-width: 840px) {
-      header {
-        padding: 16px 16px;
-      }
-
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-right {
-        order: -1;
-      }
-
-      .hero-title {
-        font-size: 2rem;
-      }
-
-      .hero-metrics {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .grid-2 {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .metrics-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-  </style>
+footer {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <div class="logo">LUIZ GUIMARÃES</div>
-    <nav>
-      <a href="#resumo">Resumo</a>
-      <a href="#experiencia">Experiência</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
 
-  <main class="container">
-    <!-- HERO -->
-    <section class="hero">
-      <div>
-        <div class="hero-badge-row">
-          <span class="badge highlight">CIO · Head de TI</span>
-          <span class="badge">Transformação Digital</span>
-          <span class="badge">Saúde & Corporativo</span>
-        </div>
-        <h1 class="hero-title">Liderança de TI orientada a resultado.</h1>
-        <p class="hero-subtitle">
-          CIO e Head de TI com mais de 25 anos de experiência, unindo estratégia, governança e transformação digital
-          em ambientes críticos e altamente regulados.
-        </p>
-        <div class="hero-actions">
-          <a href="#contato" class="btn btn-primary">Falar com Luiz</a>
-          <a href="mailto:luizcarlosgj@gmail.com" class="btn btn-outline">Enviar e-mail</a>
-        </div>
-        <div class="hero-metrics">
-          <div class="metric-card">
-            <div class="metric-value">R$ 10M+</div>
-            <div class="metric-label">redução de custos em TI</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-value">99,5%</div>
-            <div class="metric-label">SLA em ambientes críticos</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-value">25+ anos</div>
-            <div class="metric-label">de experiência em TI</div>
-          </div>
-        </div>
-      </div>
+<header>
+  <h1>Luiz Guimarães</h1>
+  <h2>CIO | Head de TI | Transformação Digital</h2>
+</header>
 
-      <aside class="hero-right">
-        <div class="hero-card-header">
-          <div>
-            <div class="hero-name">Luiz Guimarães</div>
-            <div class="hero-role">CIO | Head de TI | Transformação Digital</div>
-          </div>
-          <div class="hero-location">São Carlos · SP · Brasil</div>
-        </div>
-        <div class="hero-contact">
-          <div><strong>E-mail:</strong> <a href="mailto:luizcarlosgj@gmail.com">luizcarlosgj@gmail.com</a></div>
-          <div><strong>Telefone:</strong> <a href="tel:+5516996110822">(16) 99611-0822</a></div>
-          <div><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/luizcguimaraes" target="_blank">linkedin.com/in/luizcguimaraes</a></div>
-        </div>
-        <div class="hero-tags">
-          <span class="hero-tag">HIMSS EMRAM Stage 7</span>
-          <span class="hero-tag">IT Leaders (CIO nº 1 em Saúde · 6x)</span>
-          <span class="hero-tag">Top 3 · 100 Maiores CIOs do Brasil</span>
-          <span class="hero-tag">100+ Inovadoras em TI</span>
-        </div>
-      </aside>
-    </section>
+<section>
+  <h3>Sobre mim</h3>
+  <p>
+    Executivo de Tecnologia com mais de 25 anos de experiência em liderança estratégica,
+    governança, inovação e transformação digital nos setores de saúde e corporativo.
+  </p>
+</section>
 
-    <!-- RESUMO EXECUTIVO -->
-    <section id="resumo">
-      <h2>Resumo executivo</h2>
-      <p class="section-subtitle">
-        Atuação em estratégia de tecnologia, governança de TI e transformação digital, com histórico consistente de geração de valor financeiro e operacional.
-      </p>
-      <div class="card">
-        <p>
-          Executivo de TI com mais de 25 anos de experiência, sendo 20 anos no setor de saúde, com atuação em
-          estratégia de tecnologia, governança de TI e transformação digital em ambientes críticos e altamente regulados.
-        </p>
-        <p>
-          Gestão de operações complexas, com liderança de equipes multidisciplinares de até 120 profissionais e
-          administração de budgets superiores a R$ 50M, sempre com foco em redução de custos, ganho de eficiência
-          operacional e modernização de plataformas corporativas.
-        </p>
-      </div>
+<section>
+  <h3>Experiência</h3>
+  <ul>
+    <li>Direção de TI e Transformação Digital</li>
+    <li>Governança, Segurança e Arquitetura de TI</li>
+    <li>Gestão de equipes multidisciplinares</li>
+    <li>Implantação de soluções corporativas e hospitalares</li>
+  </ul>
+</section>
 
-      <div class="card">
-        <h3>Métricas e reconhecimentos</h3>
-        <div class="metrics-grid">
-          <span class="metric-chip">R$ 10M+ em redução de CAPEX em Data Center e contratos</span>
-          <span class="metric-chip">R$ 3M de aumento de receita via automação e analytics</span>
-          <span class="metric-chip">SLA 99,5% em ambientes críticos multi-cliente</span>
-          <span class="metric-chip">NPS até 98% em operações de TI</span>
-          <span class="metric-chip">50% menos tempo em auditorias e autorizações com IA</span>
-          <span class="metric-chip">90% de redução de falhas operacionais com automação</span>
-          <span class="metric-chip">Bloqueio de ransomware com plano estruturado de cibersegurança</span>
-          <span class="metric-chip">HIMSS EMRAM Stage 7 · referência máxima em maturidade digital</span>
-        </div>
-      </div>
-    </section>
+<section>
+  <h3>Contato</h3>
+  <p>E-mail: seuemail@exemplo.com</p>
+  <p>LinkedIn: linkedin.com/in/seuperfil</p>
+</section>
 
-    <!-- EXPERIÊNCIA -->
-    <section id="experiencia">
-      <h2>Experiência em liderança de TI</h2>
-      <p class="section-subtitle">
-        Liderança de transformação digital, governança e operações de TI em operadoras de saúde, hospitais e ambiente corporativo.
-      </p>
+<footer>
+  © <span id="year"></span> Luiz Guimarães — CIO & Head de TI
+</footer>
 
-      <div class="card">
-        <h3>Gerente de Tecnologia e Inovação · IPASGO Saúde</h3>
-        <h4>2025 – 2026 · Operadora de saúde com 600.000 beneficiários</h4>
-        <ul>
-          <li>Reestruturação completa da TI (sustentação, segurança e inovação) em ambiente de crise.</li>
-          <li>Implantação do PDTI com estruturação de CAPEX e OPEX.</li>
-          <li>Estratégia de migração para Cloud e fortalecimento da segurança da informação.</li>
-          <li>Liderança de equipes de desenvolvimento e automação (Python, Java, PHP, integrações).</li>
-          <li class="highlight-text">R$ 10M em redução de CAPEX via revisão de Data Center e renegociação de contratos.</li>
-        </ul>
-      </div>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
-      <div class="card">
-        <h3>Diretor de Operações de TI</h3>
-        <h4>2024 · Empresa de suporte e sustentação de TI com 240+ clientes</h4>
-        <ul>
-          <li>Gestão de infraestrutura multi-cliente (Oracle, SQL Server, PostgreSQL, MySQL, VMware, Hyper-V, KVM).</li>
-          <li>Estruturação de KPIs e OKRs com melhoria de performance e qualidade das equipes.</li>
-          <li>Gestão de times de desenvolvimento com Terraform, Java, Python, PHP e automação.</li>
-          <li class="highlight-text">SLA 99,5% de disponibilidade em ambientes críticos multi-cliente.</li>
-          <li class="highlight-text">Redução de 40% em falhas de ambiente e incidentes de segurança | NPS 90%.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Executivo de TI · Unimed São José dos Campos</h3>
-        <h4>2022 – 2023 · 110.000 beneficiários · 1.600 colaboradores · 18 unidades</h4>
-        <ul>
-          <li>Implantação de ERP Totvs, Tasy e Animati em ambiente multiunidade.</li>
-          <li>Projeto Open Health e interoperabilidade RES (InterSystems/Interall); migração On-Premise → Cloud (AWS, Azure, GCP).</li>
-          <li>Projetos de IA para auditoria, autorização e automação de processos.</li>
-          <li>Liderança de desenvolvimento (Python, Java, PHP, JavaScript) para automação e integração.</li>
-          <li class="highlight-text">R$ 1,9M de economia com modernização de Data Centers (Dell APEX).</li>
-          <li class="highlight-text">R$ 1M em redução de custos via revisão e renegociação de contratos em 1 ano.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Gerente de TI · Unimed São Carlos</h3>
-        <h4>2018 – 2022 · 110.000 beneficiários · 1.800 colaboradores · 16 unidades</h4>
-        <ul>
-          <li>PDTI com 96 projetos em 3 anos, focados em automação, redução de custos e novas tecnologias.</li>
-          <li>Implantação de ERP Philips Tasy, Matrix, Sênior RH e CRM Multidados.</li>
-          <li>Uso de IA (IBM Watson), RPA (Automation Anywhere) e IoT para segurança do paciente.</li>
-          <li>Plano de Cibersegurança: SOC, MDR, Zero Trust, LGPD, ISO 27001.</li>
-          <li class="highlight-text">R$ 2,2M de economia com execução do PDTI e otimização de processos.</li>
-          <li class="highlight-text">Disponibilidade 99,5% | NPS 90% | 90% de redução de falhas operacionais com automação.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Superintendente de TI e Administrativo · Unimed Volta Redonda</h3>
-        <h4>2010 – 2018 · 60.000 beneficiários · ambiente hospitalar de alta complexidade</h4>
-        <ul>
-          <li>Liderança de equipe com 120 profissionais (TI e áreas administrativas).</li>
-          <li>Certificação HIMSS EMRAM Stage 7 – 3º hospital da América Latina a atingir o benchmark máximo.</li>
-          <li>Implantação de ERP MV Soul, Totvs 12, Unicoo e plataforma HealthShare InterSystems.</li>
-          <li>Uso de IBM Watson para apoio à decisão clínica e análise de exames de imagem.</li>
-          <li>Implantação de ITIL e COBIT; planejamento estratégico com Fundação Dom Cabral.</li>
-          <li class="highlight-text">R$ 3M de aumento de receita no primeiro ano via automação e análise de dados.</li>
-          <li class="highlight-text">NPS 98% | 50% de redução no tempo de resolução de incidentes | ISO 9001.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- EXPERTISE -->
-    <section id="expertise">
-      <h2>Áreas de expertise</h2>
-      <p class="section-subtitle">
-        Atuação integrada entre tecnologia, negócio e operação, com perfil híbrido em saúde e corporativo.
-      </p>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Estratégia & Governança</h3>
-          <ul>
-            <li>PDTI, gestão de CAPEX/OPEX e priorização de portfólio de projetos.</li>
-            <li>ITIL, COBIT, definição de SLAs, KPIs e OKRs.</li>
-            <li>Planejamento estratégico de TI alinhado ao negócio.</li>
-          </ul>
-          <div class="pill-row">
-            <span class="pill">PDTI</span>
-            <span class="pill">CAPEX / OPEX</span>
-            <span class="pill">ITIL</span>
-            <span class="pill">COBIT</span>
-            <span class="pill">OKR & KPI</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Tecnologia & Cloud</h3>
-          <ul>
-            <li>Arquiteturas híbridas e multi-cloud (AWS, Azure, GCP).</li>
-            <li>Data Centers, virtualização e alta disponibilidade.</li>
-            <li>Automação de infraestrutura e observabilidade.</li>
-          </ul>
-          <div class="pill-row">
-            <span class="pill">AWS</span>
-            <span class="pill">Azure</span>
-            <span class="pill">GCP</span>
-            <span class="pill">VMware · Hyper-V · KVM</span>
-            <span class="pill">Terraform</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Saúde Digital & Interoperabilidade</h3>
-          <ul>
-            <li>Implantação de ERPs e prontuário eletrônico em operadoras e hospitais.</li>
-            <li>HL7, FHIR, RES, Open Health e interoperabilidade entre plataformas.</li>
-            <li>Projetos de transformação digital em saúde com foco em eficiência e segurança.</li>
-          </ul>
-          <div class="pill-row">
-            <span class="pill">Tasy</span>
-            <span class="pill">MV</span>
-            <span class="pill">Totvs</span>
-            <span class="pill">HL7 · FHIR</span>
-            <span class="pill">InterSystems</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Dados, IA & Inovação</h3>
-          <ul>
-            <li>BI, analytics e uso de dados para decisão executiva.</li>
-            <li>IA aplicada a auditoria, autorização e automação de processos.</li>
-            <li>RPA e automação para redução de falhas e aumento de produtividade.</li>
-          </ul>
-          <div class="pill-row">
-            <span class="pill">BI & Analytics</span>
-            <span class="pill">Inteligência Artificial</span>
-            <span class="pill">RPA</span>
-            <span class="pill">IBM Watson</span>
-            <span class="pill">Automation Anywhere</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Cibersegurança & Compliance</h3>
-          <ul>
-            <li>Estratégias de Zero Trust, SOC e MDR.</li>
-            <li>LGPD, ISO 27001 e gestão de risco em ambientes críticos.</li>
-            <li>Prevenção e resposta a incidentes, incluindo ransomware.</li>
-          </ul>
-          <div class="pill-row">
-            <span class="pill">LGPD</span>
-            <span class="pill">ISO 27001</span>
-            <span class="pill">Zero Trust</span>
-            <span class="pill">SOC · MDR</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Diferencial executivo</h3>
-          <ul>
-            <li>Liderança de transformação digital em ambientes críticos e regulados.</li>
-            <li>Histórico consistente de geração de valor financeiro com tecnologia.</li>
-            <li>Forte integração entre TI, negócio e operação, com perfil híbrido saúde/corporativo.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato">
-      <h2>Contato</h2>
-      <p class="section-subtitle">
-        Aberto a posições de CIO, Head de TI, Diretor de Tecnologia e consultoria executiva em transformação digital, saúde e corporativo.
-      </p>
-      <div class="card contact-card">
-        <p><strong>E-mail:</strong> <a href="mailto:luizcarlosgj@gmail.com">luizcarlosgj@gmail.com</a></p>
-        <p><strong>Telefone / WhatsApp:</strong> <a href="tel:+5516996110822">(16) 99611-0822</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/luizcguimaraes" target="_blank">linkedin.com/in/luizcguimaraes</a></p>
-        <p><strong>Cidade:</strong> São Carlos · SP · Brasil</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © <span id="year"></span> Luiz Guimarães · CIO | Head de TI · Transformação Digital
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
