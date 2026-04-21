@@ -1,118 +1,177 @@
-<!-- RESUMO EXECUTIVO + MÉTRICAS -->
-<section id="resumo">
-  <h3>Resumo Executivo</h3>
-  <p>
-    Executivo de Tecnologia com mais de 25 anos liderando estratégia, governança e transformação digital.
-    Atuação consolidada na modernização de ambientes críticos, aumento de eficiência operacional e
-    alinhamento da tecnologia aos objetivos de negócio.
-    Experiência na condução de iniciativas de grande escala, com foco em redução de custos,
-    alta disponibilidade e geração de valor sustentável.
-  </p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Luiz Guimarães | CIO & Head de TI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="CIO e Head de TI com mais de 25 anos de experiência em estratégia, governança e transformação digital.">
 
-  <div class="metrics">
-    <div class="metric-card">
-      <div class="metric-value">25+ anos</div>
-      <div class="metric-label">liderando TI e operações</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-value">99,5%</div>
-      <div class="metric-label">disponibilidade de sistemas críticos</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-value">R$ 10M+</div>
-      <div class="metric-label">redução e otimização de custos</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-value">30+</div>
-      <div class="metric-label">projetos estratégicos entregues</div>
-    </div>
-  </div>
+<style>
+:root {
+  --bg: #050711;
+  --panel: #101321;
+  --text: #f5f5f5;
+  --muted: #b7b7b7;
+  --accent: #f2c94c;
+  --primary: #2f80ed;
+  --border: #22263a;
+  --font: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+  gap: 30px;
+}
+
+.left {
+  width: 30%;
+  background: var(--panel);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.left img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.right {
+  width: 70%;
+}
+
+section {
+  background: var(--panel);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.metric-card {
+  background: #0d111f;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.card {
+  background: #0d111f;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media(max-width: 900px){
+  .container { flex-direction: column; }
+  .left, .right { width: 100%; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<aside class="left">
+<img src="foto.jpg" alt="Foto">
+
+<h2>Luiz Guimarães</h2>
+<p>CIO • Head de TI</p>
+
+<p>Transformação Digital<br>Governança & Estratégia</p>
+
+<p><a href="mailto:luizcarlosgj@gmail.com">E-mail</a></p>
+<p><a href="https://linkedin.com/in/luizcguimaraes" target="_blank">LinkedIn</a></p>
+</aside>
+
+<main class="right">
+
+<section>
+<h3>Resumo Executivo</h3>
+<p>
+Executivo de Tecnologia com mais de 25 anos liderando estratégia, governança e transformação digital.
+Experiência na modernização de ambientes críticos, aumento de eficiência operacional e redução de custos.
+Atuação direta com C-Level, conectando tecnologia à geração de valor para o negócio.
+</p>
+
+<div class="metrics">
+<div class="metric-card">25+ anos<br><small>Liderança</small></div>
+<div class="metric-card">99,5%<br><small>Disponibilidade</small></div>
+<div class="metric-card">R$ 10M+<br><small>Economia</small></div>
+<div class="metric-card">30+<br><small>Projetos</small></div>
+</div>
 </section>
 
-<!-- EXPERIÊNCIA + TIMELINE -->
-<section id="experiencia">
-  <h3>Experiência</h3>
-  <ul>
-    <li>Liderança executiva de TI com atuação estratégica junto ao C-Level</li>
-    <li>Definição e implantação de governança, segurança e arquitetura corporativa</li>
-    <li>Gestão de operações críticas com foco em continuidade e eficiência</li>
-    <li>Condução de transformação digital e modernização tecnológica</li>
-  </ul>
-
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-year">Atual</div>
-      <div class="timeline-role">CIO / Head de TI</div>
-      <div class="timeline-desc">
-        Responsável pela estratégia de tecnologia, governança corporativa e transformação digital,
-        com foco em eficiência operacional, inovação e geração de valor ao negócio.
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-year">Anterior</div>
-      <div class="timeline-role">Diretor de Infraestrutura e Operações</div>
-      <div class="timeline-desc">
-        Liderança de ambientes críticos e operações de alta disponibilidade, garantindo continuidade
-        de negócios e evolução da arquitetura tecnológica.
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-year">Carreira</div>
-      <div class="timeline-role">Evolução Executiva em TI</div>
-      <div class="timeline-desc">
-        Trajetória consolidada em organizações de grande porte, com atuação em projetos estratégicos,
-        ambientes complexos e transformação organizacional.
-      </div>
-    </div>
-  </div>
+<section>
+<h3>Principais Resultados</h3>
+<ul>
+<li>Redução de custos superiores a R$ 10 milhões com otimização de contratos e infraestrutura</li>
+<li>Implantação de ambientes críticos com alta disponibilidade acima de 99,5%</li>
+<li>Liderança de projetos estratégicos de transformação digital em larga escala</li>
+<li>Estruturação de governança de TI alinhada ao negócio e compliance</li>
+</ul>
 </section>
 
-<!-- ESPECIALIZAÇÃO + CARDS EXECUTIVOS -->
-<section id="expertise">
-  <h3>Especialização</h3>
-  <ul>
-    <li>Estratégia de Tecnologia e Alinhamento ao Negócio</li>
-    <li>Governança, Riscos e Compliance (GRC)</li>
-    <li>Operações de TI e Ambientes Críticos</li>
-    <li>Transformação Digital e Inovação</li>
-  </ul>
-
-  <div class="cards-grid">
-    <div class="card">
-      <div class="card-title">Governança & GRC</div>
-      <div class="card-text">
-        Estruturação de modelos de governança, gestão de riscos e conformidade regulatória.
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">Cibersegurança</div>
-      <div class="card-text">
-        Proteção de ativos críticos, mitigação de riscos e fortalecimento da resiliência organizacional.
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">Arquitetura Corporativa</div>
-      <div class="card-text">
-        Definição de arquiteturas escaláveis, resilientes e alinhadas à estratégia empresarial.
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">Transformação Digital</div>
-      <div class="card-text">
-        Modernização de sistemas, automação de processos e melhoria da experiência do usuário.
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">Liderança Executiva</div>
-      <div class="card-text">
-        Formação e desenvolvimento de equipes de alta performance, com foco em resultados.
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">Eficiência & Custos</div>
-      <div class="card-text">
-        Otimização de investimentos em tecnologia e aumento de eficiência operacional.
-      </div>
-    </div>
-  </div>
+<section>
+<h3>Experiência</h3>
+<ul>
+<li>Liderança executiva de TI e atuação estratégica junto ao C-Level</li>
+<li>Governança, segurança da informação e arquitetura corporativa</li>
+<li>Gestão de operações críticas e continuidade de negócios</li>
+<li>Transformação digital e modernização tecnológica</li>
+</ul>
 </section>
+
+<section>
+<h3>Especialização</h3>
+
+<div class="cards-grid">
+<div class="card">Governança & GRC</div>
+<div class="card">Cibersegurança</div>
+<div class="card">Arquitetura de TI</div>
+<div class="card">Transformação Digital</div>
+<div class="card">Liderança Executiva</div>
+<div class="card">Eficiência Operacional</div>
+</div>
+
+</section>
+
+<section>
+<h3>Contato</h3>
+<p>Email: luizcarlosgj@gmail.com</p>
+<p>LinkedIn: linkedin.com/in/luizcguimaraes</p>
+<p>Telefone: (16) 99611-0822</p>
+</section>
+
+</main>
+</div>
+
+</body>
+</html>
