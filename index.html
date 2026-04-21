@@ -13,79 +13,86 @@ body {
   color:#fff;
 }
 
+/* LAYOUT */
 .container {
-  max-width:1100px;
+  max-width:1200px;
   margin:auto;
-  padding:60px 20px;
+  padding:40px 20px;
+  display:grid;
+  grid-template-columns: 320px 1fr;
+  gap:40px;
 }
 
-/* HERO */
-.hero {
-  margin-bottom:50px;
+/* SIDEBAR */
+.sidebar {
+  position:sticky;
+  top:20px;
 }
 
-.hero h1 {
-  font-size:36px;
-  color:#f2c94c;
+.sidebar img {
+  width:100%;
+  border-radius:12px;
+  margin-bottom:15px;
 }
 
-.hero p {
-  font-size:18px;
-  color:#d1d5db;
+.sidebar h2 {
+  margin:0;
 }
 
-/* SECTIONS */
+.sidebar p {
+  color:#aaa;
+}
+
+.btn {
+  display:block;
+  margin-top:10px;
+  padding:10px;
+  text-align:center;
+  border-radius:8px;
+  text-decoration:none;
+  color:white;
+  background:#2f80ed;
+}
+
+/* CONTEUDO */
 section {
   margin-bottom:50px;
+}
+
+h1 {
+  color:#f2c94c;
 }
 
 h2 {
   color:#f2c94c;
 }
 
-/* CARDS */
-.card {
-  background:#101321;
-  padding:20px;
-  border-radius:14px;
-  margin-bottom:16px;
-  border:1px solid rgba(255,255,255,0.05);
+.metric {
+  display:inline-block;
+  margin-right:20px;
+  margin-top:10px;
+  font-weight:bold;
 }
 
 /* PROJETOS */
 .projeto {
-  margin-bottom:25px;
+  background:#101321;
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:20px;
 }
 
 .projeto h3 {
-  color:#fff;
-  margin-bottom:6px;
+  margin-bottom:10px;
 }
 
-.projeto ul {
-  margin-top:8px;
-}
-
-.projeto li {
-  margin-bottom:4px;
+.projeto p {
+  margin:6px 0;
   color:#ccc;
 }
 
-/* BOTÃO */
-.btn {
-  display:inline-block;
-  padding:10px 14px;
-  background:#2f80ed;
-  border-radius:8px;
-  color:white;
-  text-decoration:none;
-  margin-top:10px;
-}
-
-/* CONTATO */
-.contato p {
-  margin:6px 0;
-  font-size:16px;
+.projeto strong {
+  color:#fff;
 }
 
 </style>
@@ -95,119 +102,96 @@ h2 {
 
 <div class="container">
 
-<!-- HERO -->
-<section class="hero">
-<h1>Luiz Guimarães | CIO</h1>
+<!-- SIDEBAR -->
+<div class="sidebar">
+<img src="foto.jpg">
+
+<h2>Luiz Guimarães</h2>
+<p>CIO | Transformação Digital</p>
+
+<a class="btn" href="CV_Luiz_Guimaraes_HeadTI.pdf" target="_blank">Ver CV</a>
+<a class="btn" href="https://wa.me/5516996110822" target="_blank">WhatsApp</a>
+<a class="btn" href="https://linkedin.com/in/luizcguimaraes" target="_blank">LinkedIn</a>
+
+<p><strong>Telefone:</strong><br>(16) 99611-0822</p>
+<p><strong>Email:</strong><br>luizcarlosgj@gmail.com</p>
+</div>
+
+<!-- CONTEUDO -->
+<div>
+
+<section>
+<h1>Transformo tecnologia em resultado de negócio</h1>
 
 <p>
-Transformo tecnologia em eficiência operacional, redução de custos e geração de valor
-em ambientes críticos e altamente regulados.
+Executivo de TI com mais de 25 anos de experiência, sendo 20 anos em saúde,
+liderando transformação digital, eficiência operacional e operações críticas.
 </p>
 
-<p>
-Executivo com mais de 25 anos de experiência, sendo 20 anos no setor de saúde,
-atuando na liderança de transformação digital, governança e operações em larga escala.
-</p>
-</section>
-
-<!-- VALOR -->
-<section>
-<h2>Como Gero Valor</h2>
-
-<div class="card">Eficiência operacional com redução estrutural de custos</div>
-<div class="card">Transformação digital com impacto direto no negócio</div>
-<div class="card">Governança, previsibilidade e controle</div>
-<div class="card">Gestão de ambientes críticos com alta disponibilidade</div>
+<div class="metric">+R$10M redução de custos</div>
+<div class="metric">+R$3M receita gerada</div>
+<div class="metric">99,5% SLA</div>
+<div class="metric">120 profissionais</div>
 
 </section>
 
-<!-- RESULTADOS -->
 <section>
-<h2>Resultados</h2>
+<h2>Atuação Executiva</h2>
 
 <ul>
-<li>R$10M+ em redução de custos</li>
-<li>R$3M incremento de receita</li>
-<li>Redução de até 90% em falhas</li>
-<li>NPS de até 98%</li>
-<li>HIMSS EMRAM Stage 7</li>
+<li>Interação direta com C-Level e Conselho</li>
+<li>Gestão de orçamento superior a R$50M</li>
+<li>Condução de transformação digital</li>
+<li>Gestão de ambientes críticos e regulados</li>
 </ul>
-
 </section>
 
-<!-- PROJETOS -->
 <section>
 <h2>Projetos Executados</h2>
 
 <div class="projeto">
 <h3>Unimed Volta Redonda</h3>
-<ul>
-<li>Implantação de ERP hospitalar e interoperabilidade</li>
-<li>Projetos de Inteligência Artificial com IBM Watson</li>
-<li>Integração de sistemas assistenciais e administrativos</li>
-<li>Governança de TI e transformação digital completa</li>
-<li><strong>Resultado:</strong> HIMSS Stage 7, aumento de receita e eficiência operacional</li>
-</ul>
+
+<p><strong>Desafio:</strong> ambiente hospitalar complexo e baixa integração de sistemas</p>
+<p><strong>Ação:</strong> implantação de ERP, interoperabilidade, IA (IBM Watson) e governança</p>
+<p><strong>Resultado:</strong> HIMSS Stage 7, +R$3M receita, NPS 98%, redução de falhas operacionais</p>
 </div>
 
 <div class="projeto">
 <h3>Unimed São Carlos</h3>
-<ul>
-<li>Execução de mais de 90 projetos estratégicos</li>
-<li>Implantação de RPA e automação de processos</li>
-<li>Fortalecimento de cibersegurança</li>
-<li>Modernização da infraestrutura</li>
-<li><strong>Resultado:</strong> Redução de custos e falhas operacionais</li>
-</ul>
+
+<p><strong>Desafio:</strong> baixa eficiência operacional e alto volume de processos manuais</p>
+<p><strong>Ação:</strong> execução de 96 projetos com RPA, IA e modernização tecnológica</p>
+<p><strong>Resultado:</strong> R$2,2M economia, 90% redução de falhas, SLA 99,5%</p>
 </div>
 
 <div class="projeto">
 <h3>Unimed São José dos Campos</h3>
-<ul>
-<li>Implantação de ERP e cloud</li>
-<li>Integração de sistemas corporativos</li>
-<li>Melhoria da eficiência operacional</li>
-<li><strong>Resultado:</strong> Redução de custos e ganho de produtividade</li>
-</ul>
+
+<p><strong>Desafio:</strong> infraestrutura legada e alto custo operacional</p>
+<p><strong>Ação:</strong> modernização com cloud, ERP e automação</p>
+<p><strong>Resultado:</strong> R$1,9M economia, aumento de 50% na eficiência</p>
 </div>
 
 <div class="projeto">
-<h3>Grupo Visual Systems</h3>
-<ul>
-<li>Gestão de ambientes multi-clientes</li>
-<li>Operação nacional de TI</li>
-<li><strong>Resultado:</strong> SLA 99,5% e redução de incidentes</li>
-</ul>
+<h3>Ipasgo Saúde</h3>
+
+<p><strong>Desafio:</strong> alto custo e baixa eficiência operacional</p>
+<p><strong>Ação:</strong> renegociação de contratos, reestruturação de TI e governança</p>
+<p><strong>Resultado:</strong> R$10M redução de custos e modernização da operação</p>
+</div>
+
+<div class="projeto">
+<h3>Visual Systems</h3>
+
+<p><strong>Desafio:</strong> operação complexa multi-cliente</p>
+<p><strong>Ação:</strong> gestão de infraestrutura, segurança e operações em larga escala</p>
+<p><strong>Resultado:</strong> SLA 99,5%, redução de 40% incidentes, NPS 90%</p>
 </div>
 
 </section>
 
-<!-- CV -->
-<section>
-<h2>Currículo</h2>
-<a class="btn" href="CV_Luiz_Guimaraes_HeadTI.pdf" target="_blank">
-Visualizar Currículo
-</a>
-</section>
-
-<!-- CONTATO -->
-<section class="contato">
-<h2>Contato</h2>
-
-<p><strong>Telefone:</strong> (16) 99611-0822</p>
-<p><strong>Email:</strong> luizcarlosgj@gmail.com</p>
-
-<a class="btn" href="https://wa.me/5516996110822" target="_blank">
-Falar no WhatsApp
-</a>
-
-<p>
-<a href="https://linkedin.com/in/luizcguimaraes" target="_blank">
-LinkedIn
-</a>
-</p>
-
-</section>
+</div>
 
 </div>
 
