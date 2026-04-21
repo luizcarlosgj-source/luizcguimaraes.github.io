@@ -1,499 +1,118 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8" />
-<title>Luiz Guimarães | CIO & Head de TI</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="CIO e Head de TI com mais de 25 anos de experiência em estratégia, governança e transformação digital.">
+<!-- RESUMO EXECUTIVO + MÉTRICAS -->
+<section id="resumo">
+  <h3>Resumo Executivo</h3>
+  <p>
+    Executivo de Tecnologia com mais de 25 anos liderando estratégia, governança e transformação digital.
+    Atuação consolidada na modernização de ambientes críticos, aumento de eficiência operacional e
+    alinhamento da tecnologia aos objetivos de negócio.
+    Experiência na condução de iniciativas de grande escala, com foco em redução de custos,
+    alta disponibilidade e geração de valor sustentável.
+  </p>
 
-<style>
-:root {
-  --bg: #050711;
-  --bg-alt: #080a16;
-  --panel: #101321;
-  --panel-soft: #15192a;
-  --text: #f5f5f5;
-  --muted: #b7b7b7;
-  --accent: #f2c94c;
-  --primary: #2f80ed;
-  --primary-soft: rgba(47,128,237,0.18);
-  --border: #22263a;
-  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
+  <div class="metrics">
+    <div class="metric-card">
+      <div class="metric-value">25+ anos</div>
+      <div class="metric-label">liderando TI e operações</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value">99,5%</div>
+      <div class="metric-label">disponibilidade de sistemas críticos</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value">R$ 10M+</div>
+      <div class="metric-label">redução e otimização de custos</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value">30+</div>
+      <div class="metric-label">projetos estratégicos entregues</div>
+    </div>
+  </div>
+</section>
 
-* {
-  box-sizing: border-box;
-}
+<!-- EXPERIÊNCIA + TIMELINE -->
+<section id="experiencia">
+  <h3>Experiência</h3>
+  <ul>
+    <li>Liderança executiva de TI com atuação estratégica junto ao C-Level</li>
+    <li>Definição e implantação de governança, segurança e arquitetura corporativa</li>
+    <li>Gestão de operações críticas com foco em continuidade e eficiência</li>
+    <li>Condução de transformação digital e modernização tecnológica</li>
+  </ul>
 
-body {
-  margin: 0;
-  font-family: var(--font);
-  background:
-    radial-gradient(circle at top left, rgba(47,128,237,0.18), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(242,201,76,0.12), transparent 55%),
-    radial-gradient(circle at top right, rgba(111,66,193,0.18), transparent 55%),
-    var(--bg);
-  color: var(--text);
-}
-
-/* LAYOUT PRINCIPAL */
-.container {
-  display: flex;
-  min-height: 100vh;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 40px 24px 32px;
-  gap: 32px;
-}
-
-/* COLUNA ESQUERDA */
-.left {
-  width: 34%;
-  background: linear-gradient(180deg, rgba(10,12,20,0.96), rgba(5,7,17,0.98));
-  border-radius: 18px;
-  padding: 28px 22px 26px;
-  border: 1px solid rgba(255,255,255,0.04);
-  box-shadow:
-    0 22px 45px rgba(0,0,0,0.75),
-    0 0 0 1px rgba(255,255,255,0.02);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.left::before {
-  content: "";
-  position: absolute;
-  inset: -40%;
-  background:
-    radial-gradient(circle at top, rgba(47,128,237,0.18), transparent 60%),
-    radial-gradient(circle at bottom, rgba(242,201,76,0.12), transparent 60%);
-  opacity: 0.7;
-  pointer-events: none;
-}
-
-.left-inner {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-}
-
-.left img {
-  width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.85);
-  margin-bottom: 22px;
-}
-
-.left h1 {
-  font-size: 1.9rem;
-  margin: 6px 0 4px;
-  letter-spacing: 0.02em;
-}
-
-.left h2 {
-  font-size: 1.02rem;
-  font-weight: 400;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.left h2 span {
-  display: block;
-}
-
-.badge-role {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: rgba(15, 183, 255, 0.08);
-  border: 1px solid rgba(111, 207, 255, 0.35);
-  color: #d6f3ff;
-  font-size: 0.78rem;
-  margin-top: 10px;
-}
-
-.badge-role-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #2f80ed;
-  box-shadow: 0 0 0 4px rgba(47,128,237,0.35);
-}
-
-.left .contact {
-  margin-top: 24px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.left .contact a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  padding: 11px 14px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 0.95rem;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: linear-gradient(135deg, rgba(47,128,237,0.18), rgba(15, 23, 42, 0.95));
-  color: var(--text);
-}
-
-.left .contact a.secondary {
-  background: rgba(10,12,20,0.9);
-}
-
-.left .contact a:hover {
-  border-color: rgba(242,201,76,0.7);
-  box-shadow: 0 0 0 1px rgba(242,201,76,0.4);
-}
-
-/* COLUNA DIREITA */
-.right {
-  width: 66%;
-  padding: 10px 4px 10px 4px;
-}
-
-/* SEÇÕES */
-section {
-  margin-bottom: 32px;
-  background: linear-gradient(135deg, rgba(15,17,30,0.96), rgba(8,10,22,0.98));
-  border-radius: 16px;
-  padding: 20px 22px 18px;
-  border: 1px solid rgba(255,255,255,0.04);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.65);
-}
-
-section h3 {
-  font-size: 1.1rem;
-  color: var(--accent);
-  margin: 0 0 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-section p, section li {
-  font-size: 0.98rem;
-  color: var(--text);
-  line-height: 1.7;
-}
-
-section p {
-  margin: 0;
-}
-
-ul {
-  padding-left: 18px;
-  margin: 6px 0 0;
-}
-
-li {
-  margin-bottom: 4px;
-}
-
-/* MÉTRICAS */
-.metrics {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.metric-card {
-  background: radial-gradient(circle at top, rgba(47,128,237,0.22), rgba(10,12,24,0.98));
-  border-radius: 14px;
-  padding: 10px 10px 9px;
-  border: 1px solid rgba(255,255,255,0.06);
-  text-align: left;
-}
-
-.metric-value {
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.metric-label {
-  font-size: 0.78rem;
-  color: var(--muted);
-  margin-top: 2px;
-}
-
-/* TIMELINE */
-.timeline {
-  margin-top: 10px;
-  border-left: 1px solid rgba(255,255,255,0.12);
-  padding-left: 14px;
-}
-
-.timeline-item {
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -15px;
-  top: 4px;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 4px rgba(242,201,76,0.18);
-}
-
-.timeline-year {
-  font-size: 0.8rem;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.timeline-role {
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-.timeline-desc {
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-/* CARDS EXECUTIVOS */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.card {
-  background: radial-gradient(circle at top left, rgba(47,128,237,0.18), rgba(10,12,24,0.98));
-  border-radius: 14px;
-  padding: 10px 10px 9px;
-  border: 1px solid rgba(255,255,255,0.06);
-}
-
-.card-title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 3px;
-}
-
-.card-text {
-  font-size: 0.86rem;
-  color: var(--muted);
-}
-
-/* CONTATO */
-.contact-lines p {
-  margin: 2px 0;
-  font-size: 0.95rem;
-}
-
-.contact-lines a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.contact-lines a:hover {
-  text-decoration: underline;
-}
-
-/* FOOTER */
-footer {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 24px 26px;
-  color: var(--muted);
-  font-size: 0.82rem;
-  text-align: right;
-}
-
-/* RESPONSIVO */
-@media (max-width: 960px) {
-  .container {
-    flex-direction: column;
-    padding: 20px 16px 18px;
-  }
-  .left, .right {
-    width: 100%;
-  }
-  .metrics {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .cards-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  .metrics {
-    grid-template-columns: 1fr 1fr;
-  }
-  .cards-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-  <!-- COLUNA ESQUERDA -->
-  <aside class="left">
-    <div class="left-inner">
-      <img src="foto.jpg" alt="Foto de Luiz Guimarães">
-
-      <h1>Luiz Guimarães</h1>
-      <h2>
-        CIO • Chefe de TI
-        <span>Transformação Digital & Governança</span>
-      </h2>
-
-      <div class="badge-role">
-        <span class="badge-role-dot"></span>
-        Liderança em tecnologia e estratégia
-      </div>
-
-      <div class="contact">
-        <a href="mailto:luizcarlosgj@gmail.com">E-mail</a>
-        <a href="https://linkedin.com/in/luizcguimaraes" target="_blank" class="secondary">LinkedIn</a>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-year">Atual</div>
+      <div class="timeline-role">CIO / Head de TI</div>
+      <div class="timeline-desc">
+        Responsável pela estratégia de tecnologia, governança corporativa e transformação digital,
+        com foco em eficiência operacional, inovação e geração de valor ao negócio.
       </div>
     </div>
-  </aside>
-
-  <!-- COLUNA DIREITA -->
-  <main class="right">
-
-    <!-- RESUMO EXECUTIVO + MÉTRICAS -->
-    <section id="resumo">
-      <h3>Resumo Executivo</h3>
-      <p>
-        Executivo de Tecnologia com mais de 25 anos de experiência em liderança estratégica,
-        governança, inovação e transformação digital nos setores de saúde e corporativo.
-        Especialista em modernização de ambientes críticos, gestão de equipes multidisciplinares
-        e implantação de soluções corporativas de alta disponibilidade.
-      </p>
-
-      <div class="metrics">
-        <div class="metric-card">
-          <div class="metric-value">25+ anos</div>
-          <div class="metric-label">de liderança em TI</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-value">99,5%</div>
-          <div class="metric-label">disponibilidade operacional</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-value">R$ 10M+</div>
-          <div class="metric-label">em otimização de custos</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-value">30+ projetos</div>
-          <div class="metric-label">de transformação digital</div>
-        </div>
+    <div class="timeline-item">
+      <div class="timeline-year">Anterior</div>
+      <div class="timeline-role">Diretor de Infraestrutura e Operações</div>
+      <div class="timeline-desc">
+        Liderança de ambientes críticos e operações de alta disponibilidade, garantindo continuidade
+        de negócios e evolução da arquitetura tecnológica.
       </div>
-    </section>
-
-    <!-- EXPERIÊNCIA + TIMELINE -->
-    <section id="experiencia">
-      <h3>Experiência</h3>
-      <ul>
-        <li>Direção de TI e Transformação Digital</li>
-        <li>Governança, Segurança e Arquitetura de TI</li>
-        <li>Gestão de equipes multidisciplinares</li>
-        <li>Implantação de soluções corporativas e hospitalares</li>
-      </ul>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-year">Atual</div>
-          <div class="timeline-role">CIO / Head de TI</div>
-          <div class="timeline-desc">Liderança de estratégia de TI, governança e transformação digital.</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">Anterior</div>
-          <div class="timeline-role">Diretor de Infraestrutura e Operações</div>
-          <div class="timeline-desc">Responsável por ambientes críticos, alta disponibilidade e continuidade de negócios.</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">Carreira</div>
-          <div class="timeline-role">Evolução em TI</div>
-          <div class="timeline-desc">Atuação em projetos corporativos, hospitalares e de modernização tecnológica.</div>
-        </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">Carreira</div>
+      <div class="timeline-role">Evolução Executiva em TI</div>
+      <div class="timeline-desc">
+        Trajetória consolidada em organizações de grande porte, com atuação em projetos estratégicos,
+        ambientes complexos e transformação organizacional.
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- ESPECIALIZAÇÃO + CARDS EXECUTIVOS -->
-    <section id="expertise">
-      <h3>Especialização</h3>
-      <ul>
-        <li>Transformação Digital</li>
-        <li>Estratégia e Governança</li>
-        <li>Infraestrutura e Operações</li>
-        <li>Inovação e Modernização de TI</li>
-      </ul>
+<!-- ESPECIALIZAÇÃO + CARDS EXECUTIVOS -->
+<section id="expertise">
+  <h3>Especialização</h3>
+  <ul>
+    <li>Estratégia de Tecnologia e Alinhamento ao Negócio</li>
+    <li>Governança, Riscos e Compliance (GRC)</li>
+    <li>Operações de TI e Ambientes Críticos</li>
+    <li>Transformação Digital e Inovação</li>
+  </ul>
 
-      <div class="cards-grid">
-        <div class="card">
-          <div class="card-title">Governança & Compliance</div>
-          <div class="card-text">Definição de políticas, processos e controles alinhados ao negócio.</div>
-        </div>
-        <div class="card">
-          <div class="card-title">Segurança da Informação</div>
-          <div class="card-text">Proteção de dados, gestão de riscos e continuidade operacional.</div>
-        </div>
-        <div class="card">
-          <div class="card-title">Arquitetura de TI</div>
-          <div class="card-text">Desenho de ambientes escaláveis, resilientes e integrados.</div>
-        </div>
-        <div class="card">
-          <div class="card-title">Transformação Digital</div>
-          <div class="card-text">Modernização de sistemas, automação e experiência do usuário.</div>
-        </div>
-        <div class="card">
-          <div class="card-title">Liderança & Equipes</div>
-          <div class="card-text">Gestão de times multidisciplinares e desenvolvimento de talentos.</div>
-        </div>
-        <div class="card">
-          <div class="card-title">Inovação & Estratégia</div>
-          <div class="card-text">Alinhamento da tecnologia à visão de longo prazo do negócio.</div>
-        </div>
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-title">Governança & GRC</div>
+      <div class="card-text">
+        Estruturação de modelos de governança, gestão de riscos e conformidade regulatória.
       </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato">
-      <h3>Contato</h3>
-      <div class="contact-lines">
-        <p>E-mail: <a href="mailto:luizcarlosgj@gmail.com">luizcarlosgj@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/luizcguimaraes" target="_blank">linkedin.com/in/luizcguimaraes</a></p>
-        <p>Telefone: (16) 99611-0822</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Cibersegurança</div>
+      <div class="card-text">
+        Proteção de ativos críticos, mitigação de riscos e fortalecimento da resiliência organizacional.
       </div>
-    </section>
-
-  </main>
-</div>
-
-<footer>
-  © <span id="year"></span> Luiz Guimarães — CIO & Head de TI
-</footer>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-</body>
-</html>
+    </div>
+    <div class="card">
+      <div class="card-title">Arquitetura Corporativa</div>
+      <div class="card-text">
+        Definição de arquiteturas escaláveis, resilientes e alinhadas à estratégia empresarial.
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Transformação Digital</div>
+      <div class="card-text">
+        Modernização de sistemas, automação de processos e melhoria da experiência do usuário.
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Liderança Executiva</div>
+      <div class="card-text">
+        Formação e desenvolvimento de equipes de alta performance, com foco em resultados.
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Eficiência & Custos</div>
+      <div class="card-text">
+        Otimização de investimentos em tecnologia e aumento de eficiência operacional.
+      </div>
+    </div>
+  </div>
+</section>
