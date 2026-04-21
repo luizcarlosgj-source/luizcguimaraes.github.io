@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Luiz Guimarães | CIO Estratégico</title>
+<title>Luiz Guimarães | CIO</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -32,69 +32,92 @@ nav a {
 
 nav a:hover { color:#fff; }
 
+/* SIDEBAR */
+.sidebar {
+  position:fixed;
+  top:70px;
+  left:20px;
+  width:260px;
+  background:#101321;
+  padding:20px;
+  border-radius:16px;
+}
+
+.sidebar img {
+  width:100%;
+  border-radius:12px;
+  margin-bottom:12px;
+}
+
+.sidebar h2 {
+  margin:6px 0;
+}
+
+.sidebar p {
+  color:#bbb;
+  font-size:14px;
+}
+
+/* BOTÕES */
+.btn {
+  display:block;
+  margin-top:10px;
+  padding:10px;
+  border-radius:8px;
+  text-decoration:none;
+  text-align:center;
+  color:white;
+  background:linear-gradient(135deg,#2f80ed,#1c4ed8);
+}
+
 /* CONTAINER */
 .container {
-  max-width:1100px;
-  margin:auto;
+  margin-left:320px;
+  max-width:900px;
   padding:90px 20px 40px;
 }
 
-/* SECTIONS */
-section {
-  margin-bottom:50px;
-}
-
-h2 {
+/* HERO */
+.hero h1 {
   color:#f2c94c;
 }
 
-p {
-  line-height:1.6;
-}
-
-/* HERO */
-.hero {
-  font-size:20px;
-  font-weight:500;
+.hero p {
+  font-size:18px;
+  color:#d1d5db;
 }
 
 /* METRICS */
+.metrics {
+  margin-top:15px;
+}
+
 .metrics span {
-  display:inline-block;
-  margin:10px 15px 0 0;
-  font-size:14px;
-  color:#ccc;
+  margin-right:20px;
+  color:#aaa;
 }
 
 /* CARDS */
 .card {
   background:#101321;
   padding:18px;
-  border-radius:10px;
-  margin-bottom:12px;
+  border-radius:12px;
+  margin-bottom:14px;
 }
 
-/* BOTÃO */
-.btn {
-  display:inline-block;
-  padding:10px 14px;
-  background:#2f80ed;
-  border-radius:6px;
-  color:#fff;
-  text-decoration:none;
-  margin-top:10px;
+/* SECTIONS */
+section {
+  margin-bottom:40px;
 }
 
-/* CV */
-iframe {
-  width:100%;
-  height:600px;
-  border:none;
-  border-radius:10px;
+h2 {
+  color:#f2c94c;
 }
 
-@media(max-width:800px){
-  nav a { display:inline-block; margin:6px; }
+/* RESPONSIVO */
+@media(max-width:900px){
+  .sidebar {position:static; width:100%; margin-bottom:20px;}
+  .container {margin-left:0;}
 }
 </style>
 </head>
@@ -106,24 +129,38 @@ iframe {
 <a href="#atuacao">Atuação</a>
 <a href="#resultados">Resultados</a>
 <a href="#projetos">Projetos</a>
-<a href="#cv">CV</a>
 <a href="#contato">Contato</a>
 </nav>
 
+<!-- SIDEBAR -->
+<aside class="sidebar">
+<img src="foto.jpg">
+
+<h2>Luiz Guimarães</h2>
+<p>CIO | Transformação Digital</p>
+
+<a class="btn" href="CV_Luiz_Guimaraes_HeadTI.pdf" target="_blank">
+Ver Currículo
+</a>
+
+<a class="btn" href="https://wa.me/5516996110822" target="_blank">
+WhatsApp
+</a>
+
+<a class="btn" href="https://linkedin.com/in/luizcguimaraes" target="_blank">
+LinkedIn
+</a>
+</aside>
+
+<!-- CONTEÚDO -->
 <div class="container">
 
-<!-- HERO -->
-<section id="valor">
-<h2>Luiz Guimarães | CIO</h2>
-
-<p class="hero">
-Transformo tecnologia em eficiência operacional, redução de custos e geração de valor
-em ambientes críticos e altamente regulados.
-</p>
+<section id="valor" class="hero">
+<h1>Transformo tecnologia em eficiência operacional e geração de valor</h1>
 
 <p>
 Executivo com mais de 25 anos de experiência, sendo 20 anos no setor de saúde,
-atuando na liderança de transformação digital, governança e operações em larga escala.
+atuando em transformação digital, governança e operações críticas.
 </p>
 
 <div class="metrics">
@@ -134,105 +171,70 @@ atuando na liderança de transformação digital, governança e operações em l
 </div>
 </section>
 
-<!-- COMO ATUA -->
 <section id="atuacao">
 <h2>Como Gero Valor</h2>
 
 <div class="card">
 <strong>Eficiência Operacional</strong>
-<p>Redução estrutural de custos e aumento de produtividade através de revisão de contratos,
-automação e modernização tecnológica.</p>
+<p>Redução de custos e aumento de produtividade através de automação e revisão de contratos.</p>
 </div>
 
 <div class="card">
-<strong>Transformação Digital Real</strong>
-<p>Implantação de soluções de IA, cloud e integração de sistemas com impacto direto no negócio.</p>
+<strong>Transformação Digital</strong>
+<p>Implantação de IA, cloud e integração com impacto direto no negócio.</p>
 </div>
 
 <div class="card">
-<strong>Governança e Controle</strong>
-<p>Estruturação de modelos de governança, KPIs e previsibilidade operacional.</p>
+<strong>Governança</strong>
+<p>Estruturação de processos, KPIs e controle operacional.</p>
 </div>
 
-<div class="card">
-<strong>Ambientes Críticos</strong>
-<p>Gestão de operações com alta disponibilidade, segurança e conformidade regulatória.</p>
-</div>
 </section>
 
-<!-- RESULTADOS -->
 <section id="resultados">
-<h2>Resultados Comprovados</h2>
+<h2>Resultados</h2>
 
 <ul>
-<li>R$10M+ em redução de custos estruturais</li>
-<li>R$3M em incremento de receita com dados</li>
-<li>Redução de até 90% em falhas operacionais</li>
-<li>NPS de até 98%</li>
-<li>HIMSS EMRAM Stage 7 (nível máximo global)</li>
+<li>R$10M+ redução de custos</li>
+<li>R$3M incremento de receita</li>
+<li>90% menos falhas</li>
+<li>NPS até 98%</li>
+<li>HIMSS Stage 7</li>
 </ul>
+
 </section>
 
-<!-- PROJETOS -->
 <section id="projetos">
 <h2>Projetos Executados</h2>
 
 <div class="card">
 <h3>Unimed Volta Redonda</h3>
-<p>
-Transformação digital completa com implantação de ERP hospitalar,
-interoperabilidade e IA (IBM Watson).
-</p>
-<p><strong>Resultado:</strong> HIMSS Stage 7, +R$3M receita, NPS 98%</p>
+<p>Transformação digital completa com IA e ERP hospitalar.</p>
+<p><strong>Resultado:</strong> HIMSS Stage 7 e aumento de receita.</p>
 </div>
 
 <div class="card">
 <h3>Unimed São Carlos</h3>
-<p>
-Execução de 96 projetos estratégicos com IA, RPA e cibersegurança.
-</p>
-<p><strong>Resultado:</strong> R$2,2M economia e 90% menos falhas</p>
+<p>Execução de projetos estratégicos com automação e segurança.</p>
+<p><strong>Resultado:</strong> Redução de custos e falhas.</p>
 </div>
 
 <div class="card">
 <h3>Unimed São José dos Campos</h3>
-<p>
-Implantação de ERP, cloud e interoperabilidade.
-</p>
-<p><strong>Resultado:</strong> R$1,9M economia e ganho operacional</p>
-</div>
-
-<div class="card">
-<h3>Grupo Visual Systems</h3>
-<p>
-Gestão de ambientes multi-cliente e operação nacional.
-</p>
-<p><strong>Resultado:</strong> SLA 99,5% e -40% incidentes</p>
+<p>Implantação de ERP e cloud.</p>
+<p><strong>Resultado:</strong> Ganho de eficiência operacional.</p>
 </div>
 
 </section>
 
-<!-- CV -->
-<section id="cv">
-<h2>Currículo</h2>
-<iframe src="CV_Luiz_Guimaraes_HeadTI.pdf"></iframe>
-</section>
-
-<!-- CONTATO -->
 <section id="contato">
 <h2>Contato</h2>
 
-<a class="btn" href="https://wa.me/5516996110822" target="_blank">
-WhatsApp
-</a>
-
 <p>Email: luizcarlosgj@gmail.com</p>
 
-<p>
-<a href="https://linkedin.com/in/luizcguimaraes" target="_blank">
-LinkedIn
+<a class="btn" href="https://wa.me/5516996110822" target="_blank">
+Falar no WhatsApp
 </a>
-</p>
 
 </section>
 
